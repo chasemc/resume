@@ -1,0 +1,16 @@
+jobId,position.desc,employer.desc,category,descId,accomplishments
+9,Senior Data Scientist,ICF,data science,b,"Rapidly researched, prototyped, and deployed machine learning algorithms for energy disaggregation and electric vehicle charging detection"
+9,Senior Data Scientist,ICF,data science,a,"As part of 2 person team, built cloud computing/machine learning infrastructure (NoSQL, Azure DevOps pipelines, batch computing, etc.) from the ground up for low-cost, scalable analysis of billions of records of utility smart meter data"
+9,Senior Data Scientist,ICF,data science,c,"Established monthly, cross-team Data Science Knowledge Share meetings to promote collaboration and discuss topics such as scaling knowledge, Azure DevOps, and coding best practices"
+7,Data Scientist Post-Doc,University of Nebraska-Lincoln,"data science, marketing",b,"Designed, developed, and deployed open-source, web-based, data analysis application (SQL, R, Shiny) for analyzing repeat-purchase behavior (recruitment, retention, churn, reactivation) of Nebraska sportspersons"
+7,Data Scientist Post-Doc,University of Nebraska-Lincoln,"data science, marketing",c,"Mentored graduate students and facilitated data science research resulting in multiple journal publications, international conference presentations, and a book chapter"
+6,Graduate Research Assistant,University of Florida,"data science, engineering",a,"Integrated machine learning (e.g., Gaussian process) and optimization to design engineering systems considering uncertainty in future decision making process"
+6,Graduate Research Assistant,University of Florida,"data science, engineering",b,Collaboratively developed optimization-based solution to The NASA Langley Multidisciplinary Uncertainty Quantification Challenge (2014)
+5,Ph.D. Student Researcher,ONERA,"data science, engineering",b,Co-authored book chapter on advanced space vehicle design under uncertainty
+5,Ph.D. Student Researcher,ONERA,"data science, engineering",a,"As part of international joint-PhD collaboration between 2 universities (UF, EMSE) and ONERA aerospace lab, developed a novel method for optimal design under uncertainty that incorporated risk of future redesign into design optimization "
+4,Undergraduate Research Assistant,University of Florida,"data science, engineering",a,Created parameterized biomechanical model in Python to understand interactions of patient variability and design changes on safety of Biomet rigid sternal fixation device
+4,Undergraduate Research Assistant,University of Florida,"data science, engineering",b,Awarded Biomedical Engineering Society (BMES) Design and Research Award and Knox T. Millsaps Outstanding Undergraduate Paper Award
+3,Launch Engineer Intern,SpaceX,engineering,a,Performed maintenance of launch vehicle ground systems
+3,Launch Engineer Intern,SpaceX,engineering,b,Ground crew team member during launch of SpaceX COTS Demo Flight 1
+2,Engineer Intern,"E&S Consulting, Inc.",engineering,a,"Assisted with failure analysis investigations (inspections, materials testing, reports, research)"
+1,Undergraduate Research Assistant,University of Florida,data science,a,Developed Matlab code for compliance correction of compression / tensile strength test data

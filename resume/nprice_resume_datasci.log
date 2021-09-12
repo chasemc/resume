@@ -1,0 +1,778 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.9.12)  12 SEP 2021 17:48
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**nprice_resume_datasci.tex
+(./nprice_resume_datasci.tex
+LaTeX2e <2021-06-01> patch level 1
+L3 programming layer <2021-08-27> (/home/chase/.TinyTeX/texmf-dist/tex/latex/ba
+se/article.cls
+Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count182
+\c@section=\count183
+\c@subsection=\count184
+\c@subsubsection=\count185
+\c@paragraph=\count186
+\c@subparagraph=\count187
+\c@figure=\count188
+\c@table=\count189
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/dejavu/DejaVuSansMono.sty
+Package: DejaVuSansMono 2011/06/01 Style file for DejaVuSansMono.
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)) (/home/chase/.TinyTeX/texmf-dist/tex/latex/carlito/carlito.sty
+Package: carlito 2014/08/20 (Bob Tennent) Supports Carlito fonts for LaTeX, pdf
+LaTeX, luaLaTeX and xeLaTeX.
+(/home/chase/.TinyTeX/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+(/home/chase/.TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)) (/home/chase/.TinyTeX/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+(/home/chase/.TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/home/chase/.
+TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks17
+\XKV@tempa@toks=\toks18
+)
+\XKV@depth=\count190
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/home/chase/.TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/fontaxes/fontaxes.sty
+Package: fontaxes 2020/07/21 v1.0e Font selection axes
+LaTeX Info: Redefining \upshape on input line 29.
+LaTeX Info: Redefining \itshape on input line 31.
+LaTeX Info: Redefining \slshape on input line 33.
+LaTeX Info: Redefining \swshape on input line 35.
+LaTeX Info: Redefining \scshape on input line 37.
+LaTeX Info: Redefining \sscshape on input line 39.
+LaTeX Info: Redefining \ulcshape on input line 41.
+LaTeX Info: Redefining \textsw on input line 47.
+LaTeX Info: Redefining \textssc on input line 48.
+LaTeX Info: Redefining \textulc on input line 49.
+)) (/home/chase/.TinyTeX/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
+rs
+\f@nch@headwidth=\skip49
+\f@nch@O@elh=\skip50
+\f@nch@O@erh=\skip51
+\f@nch@O@olh=\skip52
+\f@nch@O@orh=\skip53
+\f@nch@O@elf=\skip54
+\f@nch@O@erf=\skip55
+\f@nch@O@olf=\skip56
+\f@nch@O@orf=\skip57
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+)) (/home/chase/.TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/base/fixltx2e.sty
+Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
+Applying: [2015/01/01] Old fixltx2e package on input line 46.
+
+Package fixltx2e Warning: fixltx2e is not required with releases after 2015
+(fixltx2e)                All fixes are now in the LaTeX kernel.
+(fixltx2e)                See the latexrelease package for details.
+
+Already applied: [0000/00/00] Old fixltx2e package on input line 53.
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+Carlito-TLF on input
+ line 112.
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/carlito/T1Carlito-TLF.fd
+File: T1Carlito-TLF.fd 2014/08/20 (autoinst) Font definitions for T1/Carlito-TL
+F.
+)
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 112.
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks19
+\inpenc@posthook=\toks20
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+(/home/chase/.TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/home/chase/.TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+(/home/chase/.TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/home/chase/.TinyTeX/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (/home/chase/.TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/home/chase/.TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen139
+\Hy@linkcounter=\count191
+\Hy@pagecounter=\count192
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
+nguages
+) (/home/chase/.TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/home/chase/.TinyTeX/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count193
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4073.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count194
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen140
+(/home/chase/.TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+(/home/chase/.TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count195
+\Field@Width=\dimen141
+\Fld@charsize=\dimen142
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring OFF on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count196
+\c@Item=\count197
+\c@Hfootnote=\count198
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
+)
+\Fld@listcount=\count199
+\c@bookmark@seq@number=\count266
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+(/home/chase/.TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip58
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+(/home/chase/.TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count267
+\Gm@cntv=\count268
+\c@Gm@tempcnt=\count269
+\Gm@bindingoffset=\dimen143
+\Gm@wd@mp=\dimen144
+\Gm@odd@mp=\dimen145
+\Gm@even@mp=\dimen146
+\Gm@layoutwidth=\dimen147
+\Gm@layoutheight=\dimen148
+\Gm@layouthoffset=\dimen149
+\Gm@layoutvoffset=\dimen150
+\Gm@dimlist=\toks21
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
+\LTleft=\skip59
+\LTright=\skip60
+\LTpre=\skip61
+\LTpost=\skip62
+\LTchunksize=\count270
+\LTcapwidth=\dimen151
+\LT@head=\box50
+\LT@firsthead=\box51
+\LT@foot=\box52
+\LT@lastfoot=\box53
+\LT@gbox=\box54
+\LT@cols=\count271
+\LT@rows=\count272
+\c@LT@tables=\count273
+\c@LT@chunks=\count274
+\LT@p@ftn=\toks22
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen152
+\lightrulewidth=\dimen153
+\cmidrulewidth=\dimen154
+\belowrulesep=\dimen155
+\belowbottomsep=\dimen156
+\aboverulesep=\dimen157
+\abovetopsep=\dimen158
+\cmidrulesep=\dimen159
+\cmidrulekern=\dimen160
+\defaultaddspace=\dimen161
+\@cmidla=\count275
+\@cmidlb=\count276
+\@aboverulesep=\dimen162
+\@belowrulesep=\dimen163
+\@thisruleclass=\count277
+\@lastruleclass=\count278
+\@thisrulewidth=\dimen164
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.sty
+Package: footnote 1997/01/28 1.13 Save footnotes around boxes
+\fn@notes=\box55
+\fn@width=\dimen165
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count279
+)) (/home/chase/.TinyTeX/texmf-dist/tex/latex/paralist/paralist.sty
+Package: paralist 2017/01/22 v2.7 Extended list environments
+\pltopsep=\skip63
+\plpartopsep=\skip64
+\plitemsep=\skip65
+\plparsep=\skip66
+\pl@lab=\toks23
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2021/02/05 v3.0 ragged2e Package
+\CenteringLeftskip=\skip67
+\RaggedLeftLeftskip=\skip68
+\RaggedRightLeftskip=\skip69
+\CenteringRightskip=\skip70
+\RaggedLeftRightskip=\skip71
+\RaggedRightRightskip=\skip72
+\CenteringParfillskip=\skip73
+\RaggedLeftParfillskip=\skip74
+\RaggedRightParfillskip=\skip75
+\JustifyingParfillskip=\skip76
+\CenteringParindent=\skip77
+\RaggedLeftParindent=\skip78
+\RaggedRightParindent=\skip79
+\JustifyingParindent=\skip80
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/datetime/datetime.sty
+Package: datetime 2015/03/20 v2.60 Date Time Package
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/fmtcount/fmtcount.sty
+Package: fmtcount 2020/01/30 v3.07
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/fmtcount/fcprefix.sty
+Package: fcprefix 2012/09/28
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
+Package: fcnumparser 2017/06/15
+\fc@digit@counter=\count280
+)) (/home/chase/.TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks24
+\ex@=\dimen166
+)
+\c@padzeroesN=\count281
+\fc@tmpcatcode=\count282
+\@DT@modctr=\count283
+\@ordinalctr=\count284
+\@orgargctr=\count285
+\@strctr=\count286
+\@tmpstrctr=\count287
+\@DT@loopN=\count288
+\@DT@X=\count289
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/datetime/datetime-defaults.sty
+Package: datetime-defaults 2013/09/10
+)
+\@day=\count290
+\@month=\count291
+\@year=\count292
+\c@HOUR=\count293
+\c@HOURXII=\count294
+\c@MINUTE=\count295
+\c@TOHOUR=\count296
+\c@TOMINUTE=\count297
+\c@SECOND=\count298
+\currenthour=\count299
+\currentminute=\count300
+\currentsecond=\count301
+Package datetime Info: No datetime.cfg file found, using default settings on in
+put line 308.
+\@dtctr=\count302
+\dayofyear=\count303
+\dayofweek=\count304
+LaTeX Info: Redefining \today on input line 736.
+\dt@a=\toks25
+\dt@b=\toks26
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip81
+\enit@outerparindent=\dimen167
+\enit@toks=\toks27
+\enit@inbox=\box56
+\enit@count@id=\count305
+\enitdp@description=\count306
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
+
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
+
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+)) (/home/chase/.TinyTeX/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2021/07/05 v2.14 Sectioning titles
+\ttl@box=\box57
+\beforetitleunit=\skip82
+\aftertitleunit=\skip83
+\ttl@plus=\dimen168
+\ttl@minus=\dimen169
+\ttl@toksa=\toks28
+\titlewidth=\dimen170
+\titlewidthlast=\dimen171
+\titlewidthfirst=\dimen172
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/fontawesome/fontawesome.sty
+Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
+
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-gener
+ic.tex)
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-pdfte
+x.tex)) (/home/chase/.TinyTeX/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
+\col@sep=\dimen173
+\ar@mcellbox=\box58
+\extrarowheight=\dimen174
+\NC@list=\toks29
+\extratabsurround=\skip84
+\backup@length=\skip85
+\ar@cellbox=\box59
+)
+\TX@col@width=\dimen175
+\TX@old@table=\dimen176
+\TX@old@col=\dimen177
+\TX@target=\dimen178
+\TX@delta=\dimen179
+\TX@cols=\count307
+\TX@ftn=\toks30
+)
+\cslhangindent=\skip86
+\csllabelwidth=\skip87
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count308
+\calc@Bcount=\count309
+\calc@Adimen=\dimen180
+\calc@Bdimen=\dimen181
+\calc@Askip=\skip88
+\calc@Bskip=\skip89
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count310
+\calc@Cskip=\skip90
+) (/home/chase/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count311
+\l__pdf_internal_box=\box60
+) (./nprice_resume_datasci.aux)
+\openout1 = `nprice_resume_datasci.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 223.
+LaTeX Font Info:    ... okay on input line 223.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 223.
+LaTeX Font Info:    ... okay on input line 223.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 223.
+LaTeX Font Info:    ... okay on input line 223.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 223.
+LaTeX Font Info:    ... okay on input line 223.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 223.
+LaTeX Font Info:    ... okay on input line 223.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 223.
+LaTeX Font Info:    ... okay on input line 223.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 223.
+LaTeX Font Info:    ... okay on input line 223.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 223.
+LaTeX Font Info:    ... okay on input line 223.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 223.
+LaTeX Font Info:    ... okay on input line 223.
+\c@mv@tabular=\count312
+\c@mv@boldtabular=\count313
+Package hyperref Info: Link coloring OFF on input line 223.
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/home/chase/.TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.st
+y
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count314
+)
+LaTeX Info: Redefining \ref on input line 223.
+LaTeX Info: Redefining \pageref on input line 223.
+LaTeX Info: Redefining \nameref on input line 223.
+(./nprice_resume_datasci.out) (./nprice_resume_datasci.out)
+\@outlinefile=\write3
+\openout3 = `nprice_resume_datasci.out'.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(49.79231pt, 497.92325pt, 49.79231pt)
+* v-part:(T,H,B)=(62.59596pt, 725.54538pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=497.92325pt
+* \textheight=725.54538pt
+* \oddsidemargin=-22.47768pt
+* \evensidemargin=-22.47768pt
+* \topmargin=-46.67403pt
+* \headheight=15.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=57.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/fmtcount/fc-english.def
+File: fc-english.def 2016/01/12
+)
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 20.74pt on input line 224.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
+(Font)              scaled to size 20.74pt on input line 224.
+LaTeX Font Info:    Trying to load font information for U+fontawesometwo on inp
+ut line 224.
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/fontawesome/ufontawesometwo.fd
+File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 224.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 224.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 12.0pt on input line 228.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
+(Font)              scaled to size 12.0pt on input line 228.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
+(Font)              scaled to size 10.0pt on input line 235.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 8.0pt on input line 235.
+LaTeX Font Info:    Trying to load font information for TS1+Carlito-TLF on inpu
+t line 268.
+(/home/chase/.TinyTeX/texmf-dist/tex/latex/carlito/TS1Carlito-TLF.fd
+File: TS1Carlito-TLF.fd 2014/08/20 (autoinst) Font definitions for TS1/Carlito-
+TLF.
+)
+LaTeX Font Info:    Font shape `TS1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 268.
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--268
+[]\T1/Carlito-TLF/m/n/10 As part of 2 per-son team, built cloud com-put-ing/mac
+hine learn-ing in-fras-truc-ture
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--268
+\T1/Carlito-TLF/m/n/10 (NoSQL, Azure De-vOps pipelines, batch com-put-ing, etc.
+) from the ground up for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--268
+[]\T1/Carlito-TLF/m/n/10 Rapidly re-searched, pro-to-typed, and de-ployed ma-ch
+ine learn-ing al-go-rithms for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--268
+[]\T1/Carlito-TLF/m/n/10 Established monthly, cross-team Data Sci-ence Knowl-ed
+ge Share meet-ings to pro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--268
+\T1/Carlito-TLF/m/n/10 mote col-lab-o-ra-tion and dis-cuss top-ics such as scal
+-ing knowl-edge, Azure De-vOps,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+[]\T1/Carlito-TLF/m/n/10 Designed, de-vel-oped, and de-ployed open-source, web-
+based, data anal-y-sis ap-pli-ca-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+\T1/Carlito-TLF/m/n/10 tion (SQL, R, Shiny) for an-a-lyz-ing repeat-purchase be
+-hav-ior (re-cruit-ment, re-ten-tion,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+[]\T1/Carlito-TLF/m/n/10 Mentored grad-u-ate stu-dents and fa-cil-i-tated data 
+sci-ence re-search re-sult-ing in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+\T1/Carlito-TLF/m/n/10 mul-ti-ple jour-nal pub-li-ca-tions, in-ter-na-tional co
+n-fer-ence pre-sen-ta-tions, and a book
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--296
+[]\T1/Carlito-TLF/m/n/10 As part of in-ter-na-tional joint-PhD col-lab-o-ra-tio
+n be-tween 2 uni-ver-si-ties (UF, EMSE)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--296
+\T1/Carlito-TLF/m/n/10 and ON-ERA aerospace lab, de-vel-oped a novel method for
+ op-ti-mal de-sign un-der
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--307
+[]\T1/Carlito-TLF/m/n/10 Integrated ma-chine learn-ing (e.g., Gaus-sian pro-ces
+s) and op-ti-miza-tion to de-sign
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--307
+[]\T1/Carlito-TLF/m/n/10 Collaboratively de-vel-oped optimization-based so-lu-t
+ion to The NASA Lan-g-ley Mul-ti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--318
+[]\T1/Carlito-TLF/m/n/10 Created pa-ram-e-ter-ized biome-chan-i-cal model in Py
+thon to un-der-stand in-ter-ac-tions
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--318
+\T1/Carlito-TLF/m/n/10 of pa-tient vari-abil-ity and de-sign changes on safety 
+of Biomet rigid ster-nal fix-a-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--318
+[]\T1/Carlito-TLF/m/n/10 Awarded Biomed-i-cal En-gi-neer-ing So-ci-ety (BMES) D
+e-sign and Re-search Award and
+ []
+
+
+Overfull \hbox (22.64758pt too wide) in alignment at lines 256--330
+[] []
+ []
+
+[1
+
+{/home/chase/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+Package hyperref Warning: The anchor of a bookmark and its parent's must not
+(hyperref)                be the same. Added a new anchor on input line 375.
+
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
+(Font)              scaled to size 10.0pt on input line 382.
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
+[]\T1/Carlito-TLF/m/n/10 Price, N., Chizin-ski, C., & Bur-nett, J. (2019). \T1/
+Carlito-TLF/m/it/10 Rad-sets - An R Pack-age for cre-at-ing Ra-dial Sets di-a-g
+rams\T1/Carlito-TLF/m/n/10 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 388--388
+[]\T1/Carlito-TLF/m/n/10 Price, N., & Bur-nett, J. (2019). \T1/Carlito-TLF/m/it
+/10 Tvd-iff - An R Pack-age for per-form-ing to-tal vari-a-tion reg-u-lar-ized 
+dif-fer-en-ti-a-tion\T1/Carlito-TLF/m/n/10 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
+[]\T1/Carlito-TLF/m/n/10 Price, N., & Chizin-ski, C. J. (2019). \T1/Carlito-TLF
+/m/it/10 Hunt-fishapp - A web-based, ex-ploratory data anal-y-sis ap-pli-ca-tio
+n for hunt-ing,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--407
+[]\T1/Carlito-TLF/m/n/10 Price, N. B., Chizin-ski, C. J., Fontaine, J. J., Pope
+, K. L., Rahe, M., & Rawl-in-son, J. (2020). An open-sourced, web-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--407
+\T1/Carlito-TLF/m/n/10 based ap-pli-ca-tion to im-prove our abil-ity to un-der-
+stand hunter and an-gler pur-chas-ing be-hav-ior from li-cense
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 415--415
+[]\T1/Carlito-TLF/m/n/10 Hinrichs, M. P., Price, N. B., Grun-torad, M. P., Pope
+, K. L., Fontaine, J. J., & Chizin-ski, C. J. (2020). Un-der-stand-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 415--415
+\T1/Carlito-TLF/m/n/10 Sportsper-son Re-ten-tion and Re-ac-ti-va-tion Through L
+i-cense Pur-chas-ing Be-hav-ior. \T1/Carlito-TLF/m/it/10 Wildlife So-ci-ety Bul
+-letin\T1/Carlito-TLF/m/n/10 , \T1/Carlito-TLF/m/it/10 44\T1/Carlito-TLF/m/n/10
+ (2),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 425--425
+[]\T1/Carlito-TLF/m/n/10 Balesdent, M., Bre-vault, L., Price, N. B., De-foort, 
+S., Le Riche, R., Kim, N.-H., Haftka, R. T., & Bérend, N. (2016).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 425--425
+\T1/Carlito-TLF/m/n/10 Ad-vanced Space Ve-hi-cle De-sign Tak-ing into Ac-count 
+Mul-ti-dis-ci-plinary Cou-plings and Mixed Epis-temic/Aleatory
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 425--425
+\T1/Carlito-TLF/m/n/10 Un-cer-tain-ties. In G. Fasano & J. D. Pin-tér (Eds.), \
+T1/Carlito-TLF/m/it/10 Space En-gi-neer-ing: Mod-el-ing and Op-ti-miza-tion wit
+h Case Stud-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--434
+[]\T1/Carlito-TLF/m/n/10 Chaudhuri, A., Way-caster, G., Price, N., Mat-sumura, 
+T., & Haftka, R. T. (2015). NASA Un-cer-tainty Quan-tifi-ca-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--434
+\T1/Carlito-TLF/m/n/10 Chal-lenge: An Optimization-Based Method-ol-ogy and Val-
+i-da-tion. \T1/Carlito-TLF/m/it/10 Jour-nal of Aerospace In-for-ma-tion Sys-tem
+s\T1/Carlito-TLF/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--434
+
+ []
+
+
+Package fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 436.
+
+[2pdfTeX warning (ext4): destination with the same identifier (name{bibliograph
+y}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.438 \end{document}
+                    ] (./nprice_resume_datasci.aux)
+Package rerunfilecheck Info: File `nprice_resume_datasci.out' has not changed.
+(rerunfilecheck)             Checksum: 9C5694632BF2D9E12FE5D9FD77E26C42;728.
+ ) 
+Here is how much of TeX's memory you used:
+ 12942 strings out of 480559
+ 191765 string characters out of 5903299
+ 533361 words of memory out of 5000000
+ 30333 multiletter control sequences out of 15000+600000
+ 463870 words of font info for 46 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 72i,11n,80p,1210b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/home/chase/.TinyTeX/texmf-dist/fonts/enc/dvips/carlito/crlt_z7vml3.enc}{/ho
+me/chase/.TinyTeX/texmf-dist/fonts/enc/dvips/carlito/crlt_ntvnfo.enc}{/home/cha
+se/.TinyTeX/texmf-dist/fonts/enc/dvips/fontawesome/fontawesometwo.enc}</home/ch
+ase/.TinyTeX/texmf-dist/fonts/type1/typoland/carlito/Carlito-Bold.pfb></home/ch
+ase/.TinyTeX/texmf-dist/fonts/type1/typoland/carlito/Carlito-Italic.pfb></home/
+chase/.TinyTeX/texmf-dist/fonts/type1/typoland/carlito/Carlito.pfb></home/chase
+/.TinyTeX/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb></home/chas
+e/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on nprice_resume_datasci.pdf (2 pages, 111577 bytes).
+PDF statistics:
+ 100 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
+ 20 named destinations out of 1000 (max. 500000)
+ 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+

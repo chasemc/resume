@@ -1,0 +1,161 @@
+---
+name: Nathaniel Price
+docname: "Resume"
+fontawesome: yes
+address: "Denver, Colorado"
+phone: "+1 904 315 2486"
+email: "natbprice@gmail.com"
+www: "natbprice.github.io"
+date: "`r format(Sys.time(), '%B %Y')`"
+output: function(...) {source('price_entries.R');vitae:::set_entry_formats(price_entries);vitae::cv_document(..., template = "pricetemplate.tex", citation_package = "biblatex")}
+---
+
+```{r setup, include=FALSE}
+# To save log files
+# rmarkdown::render("resume/nprice_resume.Rmd", clean = FALSE)
+
+knitr::opts_chunk$set(echo = FALSE, 
+                      warning = FALSE, 
+                      message = FALSE)
+
+library(tidyverse)
+library(vitae)
+library(lubridate)
+library(glue)
+library(rlang)
+```
+
+```{r loadData}
+
+# Education
+education <- read_csv("../data/education.csv",
+                      col_types = cols(
+                        begin = col_date("%m/%d/%y"),
+                        end = col_date("%m/%d/%y")
+                        )
+                      )
+
+# Job titles
+job.titles <- read_csv("../data/job-titles.csv",
+                      col_types = cols(
+                        begin = col_date("%m/%d/%y"),
+                        end = col_date("%m/%d/%y")
+                        )
+)
+
+# Skills
+skills <- read_csv("../data/skills.csv")
+
+# Job descriptions
+job.descriptions <- read_csv("../data/job-descriptions.csv")
+
+# Awards
+awards <- read_csv("../data/awards.csv")
+
+```
+
+# Education
+```{r education, results = "asis"}
+
+# Merge joint PhD entries
+education %>%
+  arrange(desc(end), begin) %>%
+  mutate(what = degree,
+         when = year(end),
+         with = university,
+         where = glue("{city}, {region}, {country}")) %>% 
+  select(what, when, with, where) %>% 
+  group_by(what, when) %>% 
+  summarize(what = nth(what, 1),
+            when = nth(when, 1),
+            with = if_else(n() > 1, glue("{nth(with, 1)} and {nth(with, 2)}"), nth(with, 1)),
+            where = if_else(n() > 1, glue("{nth(where, 1)} and {nth(where, 2)}"), nth(with, 1)),
+            .groups = "drop") %>% 
+  arrange(desc(when)) %>% 
+  detailed_entries(
+    what,
+    when,
+    with,
+    where,
+    .protect = F
+  )
+
+```
+
+# Experience
+
+```{r experience}
+job.titles %>% 
+  # Only 5 most recent jobs
+  arrange(desc(begin)) %>% 
+  filter(year(begin) >= 2010) %>%
+  # Join job descriptions
+  left_join(job.descriptions) %>% 
+  # Arrange by descending begin date
+  arrange(desc(begin), descId) %>% 
+  # Format as detailed entries
+  detailed_entries(
+    what = position,
+    when = as.character(
+      glue("{month(begin, label = TRUE, abbr = TRUE)} {year(begin)} - 
+           {if_else(!is.na(end), 
+           paste(month(end, label = TRUE, abbr = TRUE), year(end)), 'present')}")),
+    with = employer,
+    where = glue("{city}, {region}, {country}"),
+    why = accomplishments)
+```
+
+# Data Science Skills
+
+```{r}
+skills_formatted <- skills %>% 
+  mutate(skill = if_else(is.na(details), glue("{skill}"), glue("{skill} ({details})"))) %>% 
+  group_by(group) %>% 
+  summarize(skills = glue_collapse(skill, sep = " $\\bullet$ "))
+```
+
+```{r, results='asis', width = 40000}
+for (group in skills_formatted$group) {
+  cat(
+    glue("\\textbf{<<tools::toTitleCase(group)>>}:", .open = "<<", .close = ">>"),
+    filter(skills_formatted, group == !!group)$skills,
+    "\n\n\n"
+  )
+}
+```
+
+# Publications
+
+\faicon{book} `r bibliography_entries("publications.bib") %>% filter(type == "chapter") %>% summarize(N = n()) %>% pull(N)` book chapters
+
+\faicon{file-text} `r bibliography_entries("publications.bib") %>% filter(type == "article-journal") %>% summarize(N = n()) %>% pull(N)` peer-reviewed journal publications
+
+\faicon{pencil} `r bibliography_entries("publications.bib") %>% filter(type == "paper-conference") %>% summarize(N = n()) %>% pull(N)` conference papers
+
+\faicon{floppy-o} `r bibliography_entries("publications.bib") %>% filter(id %in% c("price_radsets_2019", "price_tvdiff_2019", "price_huntfishapp_2019")) %>% summarize(N = n()) %>% pull(N)` open-source software packages
+
+Full List Available on Google Scholar: https://scholar.google.com/citations?hl=en&user=rXaKU0EAAAAJ
+
+## Open Source Software
+
+```{r}
+bibliography_entries("publications.bib") %>%
+  filter(id %in% c("price_radsets_2019", "price_tvdiff_2019", "price_huntfishapp_2019"))
+```
+
+
+## Select Publications
+```{r}
+bibliography_entries("publications.bib") %>%
+  filter(
+    id %in% c(
+      "balesdent_advanced_2016",
+      "chaudhuri_nasa_2015",
+      "price_open-sourced_2020",
+      "hinrichs_understanding_2020"
+    )
+  ) %>%
+  arrange(desc(issued))
+```
+
+\fancyfoot[LO,LE]{\footnotesize This resume was generated on `r Sys.time()` using vitae R package and custom LaTeX template (\href{https://github.com/natbprice/cv}{github.com/natbprice/cv})}
