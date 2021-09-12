@@ -1,0 +1,6 @@
+short_description	long_description	website	project_page	languages	skills
+IDBac	A MALDI Protein and Small Molecule Bioinformatics Platform	https://chasemc.github.io/IDBac/	https://github.com/chasemc/IDBacApp	R, SQLite, HTML, CSS, javascript	
+electricShine	R package to wrap Shiny apps into Electron framework	https://chasemc.github.io/electricShine/	https://github.com/chasemc/electricShine	R, javascript, node.js	
+mzEasy	R package/Shiny app to summarize LCMS-MS experiments	https://chasemc.github.io/mzEasy/	https://github.com/chasemc/mzEasy	R	
+mzPlotter	R package/Rmarkdown report to summarize LCMS-MS experiments	""	https://github.com/chasemc/mzPlotter	R	
+mgfparse	Low-dependency R package for quickly and efficiently parsing mgf files into R	""	https://github.com/chasemc/mgfparse	R	

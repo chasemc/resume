@@ -1,0 +1,14 @@
+year	meeting	city	state	country	title
+2015-04-15	SSAOAC Annual Meeting	Atlanta	GA	USA	HPLC-DAD Method for Trace Detection of Benzoic and Sorbic Acids in High Protein Matrices
+2016-07-22	Chicago Mass Spec Day	Chicago	IL	USA	Use of MALDI-MS to Create ‘Smart’ Libraries for Drug-Lead Discovery
+2016-11-03	UIC Specialized Metabolite Community	Chicago	IL	USA	Rational design of bacterial strain libraries for drug discovery
+2017-03-09	Center for Biomolecular Sciences, UIC	Chicago	IL	USA	IDBac: A proteomic & chemometric pipeline for rapid bacterial characterization
+2018-01-27	Chicago R User Group	Chicago	IL	USA	IDBac: A Shiny App to Analyze Bacterial Fingerprints and Aid in the Discovery of Potential New Antibiotics
+2018-08-15	R/Pharma, Harvard University	Cambridge	MA	USA	IDBac: A New Paradigm in Developing Microbial Libraries for Drug Discovery
+2019-04-27	satRdays Chicago	Chicago	IL	USA	Bioinformatics in R
+2019-08-23	R/Pharma, Harvard University	Cambridge	MA	USA	Your Missing Step in Reproducible R Programming: Continuous Deployment
+2019-01-23	Chicago R User Group	Chicago	IL	USA	Single Function Lightning Talks: “lengths(), not length()”
+2020-06-01	St. Jude National Graduate Student Symposium (cancelled due to Covid19)	Memphis	TN	USA	IDBac: Bioinformatics Software for Microbial Drug Discovery Prioritization and Culturomics Characterization
+2020-02-23	Marine Natural Products Gordon Research Seminar (GRS)	Ventura	CA	USA	IDBac: Bioinformatics Software for Microbial Drug Discovery Prioritization and Culturomics Characterization
+2020-02-25	Gordon Research Conference on Marine Natural Products 	Ventura	CA	USA	IDBac: Bioinformatics Software for Microbial Drug Discovery Prioritization and Culturomics Characterization
+2020-05-08	May Institute 2020: Future developers meeting	Online (Covid)			Protein MS isn’t the only MS… Programming in R for Metabolomics Mass Spectrometry

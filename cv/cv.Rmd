@@ -1,0 +1,155 @@
+---
+name: Chase
+surname: Clark
+position: "Postdoctoral Research Associate"
+address: "VCRGE/BIOTECH/GENOMICS, School of Pharmacy, University of Wisconsin-Madison"
+www: chasemc.github.io
+email: "chasingmicrobes@gmail.com"
+twitter: ChasingMicrobes
+github: chasemc
+linkedin: hirechase
+date: "`r format(Sys.time(), '%B %Y')`"
+output: vitae::hyndman
+profilepic: here::here('assets','head.png')
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+# Skills
+ * Bioinformatics 
+ * Metabolomics
+ * Genomics/Metagenomics
+ * Natural product isolation and drug discovery
+ 
+ 
+# Current Bioinformatic Tools
+ * Advanced: R, Rmarkdown, Shiny, Neo4j, Nextflow
+ * Intermediate: Python, Flask, HTML
+ * Familiar: JavaScript
+
+```{r}
+
+orcid_data <-  rorcid::orcid_educations("0000-0001-6439-9397")$`0000-0001-6439-9397`$`affiliation-group`$summaries
+
+# only get columns that are in all
+col_in_all <- names(table(sapply(orcid_data, colnames))[table(sapply(orcid_data, colnames)) == length(orcid_data)])
+orcid_data <- lapply(orcid_data, function(x){
+  x[col_in_all]
+})
+
+orcid_data <- do.call(rbind, orcid_data)
+
+
+```
+
+
+# Education
+
+```{r}
+
+
+temp <- cbind.data.frame(orcid_data[c('education-summary.role-title','education-summary.end-date.year.value', 'education-summary.organization.name')], 
+                 paste0(orcid_data$'education-summary.organization.address.city', ", ",orcid_data$'education-summary.organization.address.region' ))
+
+colnames(temp) <- c('Degree', 'Year', 'Institution', 'Where')
+
+detailed_entries(data = temp, what = Degree, when = Year,with =  Institution, where = Where)
+```
+
+# Experience
+
+
+
+```{r}
+
+jobs <- read.delim(here::here("data/job-titles.csv"),sep = "\t")
+
+jobs$begin <- as.character(format(as.Date(jobs$begin), format="%Y"))
+jobs$end <- as.character(format(as.Date(jobs$end), format="%Y"))
+jobs$end[is.na(jobs$end)] <- "Current"
+
+jobs$duration <- paste0(jobs$begin, "-", jobs$end)
+
+
+detailed_entries(data = jobs[order(jobs$end, decreasing = T), ], what = position, when = duration,with =  employer, where = department)
+```
+# Awards
+
+```{r}
+
+grants <- read.delim(here::here("data/awards.csv"),sep = "\t")
+
+brief_entries(data = grants, what = award, when = year, with = amount)
+
+```
+
+# Talks
+
+```{r}
+
+oral <- read.delim(here::here("data/oral_contributed.csv"),sep = "\t")
+
+
+brief_entries(data = oral[order(as.Date(oral$year), decreasing = T),], what = title, when = year, with = meeting)
+
+
+```
+
+# Publications
+
+```{r include=FALSE}
+
+puburls <- read.csv(here::here("data/papers.csv"))[, 1]
+crossref_api <- paste0("https://api.crossref.org/v1/works/", puburls)
+
+pubs <- lapply(crossref_api, function(x){
+  jsonlite::fromJSON(x)$message
+})
+
+pub_dates <- sapply(pubs, function(x){ paste0(x$published$`date-parts`[1:2], collapse = "/")})
+pub_dates <- as.Date(pub_dates, format = "%Y/%M")
+
+keys <- order(pub_dates, decreasing = T)
+
+publications_bibtex <- lapply(seq_along(pubs), 
+       function(x){
+   utils::toBibtex(
+     utils::bibentry(
+       bibtype = "Article",
+       title = pubs[[x]]$title,
+       author = paste0(paste0(pubs[[x]]$author$given, " ", pubs[[x]]$author$family), collapse = ", "),
+       journal = paste0( "Citations: ", pubs[[x]]$`is-referenced-by-count`),
+       year = pubs[[x]]$issued$`date-parts`[[1]],
+       url = pubs[[x]]$DOI,
+       note = paste0("Citations: ", pubs[[x]]$`is-referenced-by-count`),
+       key=paste0(keys[[x]]))
+   )
+       })
+
+
+publications_bibtex <- publications_bibtex[keys]
+
+bibfilepath="curie.bib"
+if (file.exists(bibfilepath)){
+  file.remove(bibfilepath)
+}
+con = file(description = bibfilepath, open = "a", blocking = TRUE,
+     encoding = "UTF-8", raw = FALSE)
+for (i in publications_bibtex){
+  writeLines(i,con)
+}
+  close(con)
+
+```
+
+
+```{r}
+
+
+bibliography_entries(bibfilepath)
+
+```
+

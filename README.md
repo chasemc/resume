@@ -1,2 +1,1 @@
-# resume
-Chase's CV/Resume
+resume
