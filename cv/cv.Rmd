@@ -120,6 +120,18 @@ brief_entries(data = oral[order(as.Date(oral$year), decreasing = T),], what = ti
 
 ```
 
+# Poster Presentations
+
+
+```{r}
+posters <- read.delim(here::here("data/poster_presentations.csv"),sep = "\t")
+
+detailed_entries(data = posters[order(as.Date(posters$year), decreasing = T),], what = title, when = year, with =location , where = meeting)
+
+```
+
+
+
 # Publications
 
 ```{r include=FALSE}
@@ -174,4 +186,3 @@ for (i in publications_bibtex){
 bibliography_entries(bibfilepath)
 
 ```
-
