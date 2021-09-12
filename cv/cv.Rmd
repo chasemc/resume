@@ -76,6 +76,28 @@ jobs$duration <- paste0(jobs$begin, "-", jobs$end)
 
 detailed_entries(data = jobs[order(jobs$end, decreasing = T), ], what = position, when = duration,with =  employer, where = department)
 ```
+
+# Recent Solo Projects
+
+```{r}
+
+software <- read.delim(here::here("data/software.csv"),sep = "\t")
+software <- software[software$group == "solo", ]
+
+detailed_entries(data = software[order(software$year, decreasing = T),], what = name, when = year,with =  language, where = description)
+
+```
+
+# Recent Team Projects
+
+```{r}
+
+software <- read.delim(here::here("data/software.csv"),sep = "\t")
+software <- software[software$group == "team",  ]
+detailed_entries(data = software[order(software$year, decreasing = T),], what = name, when = year,with =  language, where = description)
+
+```
+
 # Awards
 
 ```{r}
