@@ -1,4 +1,4 @@
-price_entries <- vitae:::new_entry_formats(
+resume_entries <- vitae:::new_entry_formats(
   brief = function(what, when, with){
     paste(
       c(

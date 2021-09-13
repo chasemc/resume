@@ -7,4 +7,4 @@ year	name	description	link	language	group	contribution
 2019	mzFromImage	Predict a mass spectrum’s values from a static image file	github.com/chasemc/mzFromImage	R, Shiny	solo	Creator/Maintainer
 2021	metaBenchmarks	Benchmark metagenomic profiling/binning software	github.com/KwanLab/metaBenchmarks	Nextflow	team	Creator, teaching, leading effort
 2021	socialgene	Repository-scale genome search platform 	unreleased	Python, Flask app, Nextflow, High-throughput computing 	solo	Creator/Maintainer
-2019	2020	Low-dependency R package for quickly and efficiently parsing mgf files into R	https://github.com/chasemc/mgfparse	R	solo	Creator/Maintainer
+2019	mgfparse	Low-dependency R package for quickly and efficiently parsing mgf files into R	https://github.com/chasemc/mgfparse	R	solo	Creator/Maintainer

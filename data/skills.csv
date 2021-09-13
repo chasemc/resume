@@ -1,0 +1,23 @@
+group,skill,details
+communication,presentations,
+communication,full-stack design,"Shiny, Flask"
+communication,reports,"Rmarkdown, Jupyter"
+communication,visualization,"Base R, ggplot2, plotly, leaflet, cytoscape, networkx, gephi, etc"
+communication,technical writing,peer-reviewed publications
+programming languages,R,
+programming languages,Python,
+programming languages,Neo4j,
+programming languages,SQL,
+pipeline,"Nextflow, Make",
+software development,source control,Git
+software development,CI/CD,"Github, Travis, Azure, DevOps, etc."
+software development,automated testing,
+cloud computing,Remote server computing,"ssh, etc"
+cloud computing,high-performance and high-throughput computing,"Open science grid, HTCondor"
+statistics,machine learning,
+statistics,data analysis,
+statistics,cluster analysis,
+statistics,factor analysis,
+statistics,principal components analysis,
+statistics,cross-validation,
+statistics,experimental design,

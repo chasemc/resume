@@ -193,8 +193,12 @@ $if(jobtitle)$\moveleft.5\hoffset\centerline{$jobtitle$}$endif$
 \vspace{1 mm}
 \centerline{
 %address
-$if(address)$\faicon{map-marker} $address$ \hspace{1 mm} $endif$%
+$if(address)$\faicon{map-marker} $address$ \hspace{1 mm} $endif$
+}
+\vspace{1 mm}
+
 %github
+\centerline{
 $if(github)$\faicon{github} \href{http://github.com/$github$}{\color{black} $github$} \hspace{1 mm} $endif$%
 %twitter
 $if(twitter)$\faicon{twitter} \href{http://twitter.com/$twitter$}{\color{black} $twitter$} \hspace{1 mm} $endif$%
@@ -218,7 +222,7 @@ $if(www)$\faicon{home} \href{http://$www$}{$www$}\hspace{1 mm} $endif$%
 % Header and footer
 \pagestyle{fancy}
 \makeatletter
-\lhead{\sf\textcolor[gray]{0.4}{$if(docname)$$docname$$else$Curriculum Vitae$endif$: \@name}}
+\lhead{\sf\textcolor[gray]{0.4}{$if(docname)$$docname$$else$Resume$endif$: \@name}}
 \rhead{\sf\textcolor[gray]{0.4}{\thepage}}
 \cfoot{}
 \def\headrule{{\color[gray]{0.4}\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
