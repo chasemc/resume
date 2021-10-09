@@ -37,7 +37,7 @@ orcid_data <- do.call(rbind, orcid_data)
 
 
 temp <- cbind.data.frame(orcid_data[c('education-summary.role-title','education-summary.end-date.year.value', 'education-summary.organization.name')], 
-                 paste0(orcid_data$'education-summary.organization.address.city', ", ",orcid_data$'education-summary.organization.address.region' ))
+                         paste0(orcid_data$'education-summary.organization.address.city', ", ",orcid_data$'education-summary.organization.address.region' ))
 
 colnames(temp) <- c('Degree', 'Year', 'Institution', 'Where')
 
@@ -63,16 +63,16 @@ keycol <-c("begin","descId")
 jobs <- merge(job_titles, job_descriptions, by = "jobId", all.x = T) 
 setorderv(jobs, keycol, order=c(-1, 1))
 
-    
-  detailed_entries(jobs,
-    what = position,
-    when = as.character(
-      glue("{lubridate::month(begin, label = TRUE, abbr = TRUE)} {lubridate::year(begin)} - 
+
+detailed_entries(jobs,
+                 what = position,
+                 when = as.character(
+                   glue("{lubridate::month(begin, label = TRUE, abbr = TRUE)} {lubridate::year(begin)} - 
            {ifelse(!is.na(end), 
            paste(lubridate::month(end, label = TRUE, abbr = TRUE), lubridate::year(end)), 'present')}")),
-    with = employer,
-    where = glue("{city}, {region}, {country}"),
-    why = accomplishments)
+           with = employer,
+           where = glue("{city}, {region}, {country}"),
+           why = accomplishments)
 ```
 
 \newpage
@@ -145,6 +145,24 @@ brief_entries(data = grants, what = award, when = year, with = amount)
 
 ```
 
+# Workshops
+
+```{r workshops}
+
+library(data.table)
+library(glue)
+library(lubridate)
+
+workshops <- data.table::fread(here::here("data/workshops.csv"), sep = "\t")
+keycol <-c("begin")
+setorderv(workshops, keycol,order=-1)
+
+detailed_entries(workshops,
+                 what = name,
+                 when = as.character(
+                   glue("{lubridate::month(begin, label = TRUE, abbr = TRUE)} {lubridate::year(begin)} "))
+)
+```
 # Publications
 
 ```{r include=FALSE}
@@ -162,19 +180,19 @@ pub_dates <- as.Date(pub_dates, format = "%Y/%M")
 keys <- order(pub_dates, decreasing = T)
 
 publications_bibtex <- lapply(seq_along(pubs), 
-       function(x){
-   utils::toBibtex(
-     utils::bibentry(
-       bibtype = "Article",
-       title = pubs[[x]]$title,
-       author = paste0(paste0(pubs[[x]]$author$given, " ", pubs[[x]]$author$family), collapse = ", "),
-       journal = paste0( "Citations: ", pubs[[x]]$`is-referenced-by-count`),
-       year = pubs[[x]]$issued$`date-parts`[[1]],
-       url = pubs[[x]]$DOI,
-       note = paste0("Citations: ", pubs[[x]]$`is-referenced-by-count`),
-       key=paste0(keys[[x]]))
-   )
-       })
+                              function(x){
+                                utils::toBibtex(
+                                  utils::bibentry(
+                                    bibtype = "Article",
+                                    title = pubs[[x]]$title,
+                                    author = paste0(paste0(pubs[[x]]$author$given, " ", pubs[[x]]$author$family), collapse = ", "),
+                                    journal = paste0( "Citations: ", pubs[[x]]$`is-referenced-by-count`),
+                                    year = pubs[[x]]$issued$`date-parts`[[1]],
+                                    url = pubs[[x]]$DOI,
+                                    note = paste0("Citations: ", pubs[[x]]$`is-referenced-by-count`),
+                                    key=paste0(keys[[x]]))
+                                )
+                              })
 
 
 publications_bibtex <- publications_bibtex[keys]
@@ -184,11 +202,11 @@ if (file.exists(bibfilepath)){
   file.remove(bibfilepath)
 }
 con = file(description = bibfilepath, open = "a", blocking = TRUE,
-     encoding = "UTF-8", raw = FALSE)
+           encoding = "UTF-8", raw = FALSE)
 for (i in publications_bibtex){
   writeLines(i,con)
 }
-  close(con)
+close(con)
 
 ```
 
