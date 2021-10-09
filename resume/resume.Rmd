@@ -121,6 +121,19 @@ detailed_entries(data = software[order(software$year, decreasing = T),], what = 
 
 ```
 
+# Talks
+
+```{r}
+
+oral <- read.delim(here::here("data/oral_contributed_short.csv"),sep = "\t")
+
+
+detailed_entries(data = oral[order(as.Date(oral$year), decreasing = T),], what = meeting, when = year, why = title)
+
+
+```
+
+
 # Awards
 
 ```{r}
@@ -130,19 +143,6 @@ grants <- read.delim(here::here("data/awards.csv"),sep = "\t")
 brief_entries(data = grants, what = award, when = year, with = amount)
 
 ```
-
-# Talks
-
-```{r}
-
-oral <- read.delim(here::here("data/oral_contributed.csv"),sep = "\t")
-
-
-brief_entries(data = oral[order(as.Date(oral$year), decreasing = T),], what = title, when = year, with = meeting)
-
-
-```
-
 
 # Publications
 

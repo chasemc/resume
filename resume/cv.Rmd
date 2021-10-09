@@ -1,34 +1,19 @@
 ---
-name: Chase
-surname: Clark
-position: "Postdoctoral Research Associate"
-address: "VCRGE/BIOTECH/GENOMICS, School of Pharmacy, University of Wisconsin-Madison"
+name: Chase Clark
+address: "University of Wisconsin-Madison, School of Pharmacy, VCRGE/BIOTECH/GENOMICS"
 www: chasemc.github.io
 email: "chasingmicrobes@gmail.com"
 twitter: ChasingMicrobes
 github: chasemc
 linkedin: hirechase
 date: "`r format(Sys.time(), '%B %Y')`"
-output: vitae::hyndman
-profilepic: here::here('assets','head.png')
+output: function(...) {source('resume_entries.R');vitae:::set_entry_formats(resume_entries);vitae::cv_document(..., template = "resume_template.tex", citation_package = "biblatex")}
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
 ```
-
-# Skills
- * Bioinformatics 
- * Metabolomics
- * Genomics/Metagenomics
- * Natural product isolation and drug discovery
- 
- 
-# Current Bioinformatic Tools
- * Advanced: R, Rmarkdown, Shiny, Neo4j, Nextflow
- * Intermediate: Python, Flask, HTML
- * Familiar: JavaScript
 
 ```{r}
 
@@ -46,7 +31,7 @@ orcid_data <- do.call(rbind, orcid_data)
 ```
 
 
-# Education
+# Employment
 
 ```{r}
 
@@ -59,25 +44,64 @@ colnames(temp) <- c('Degree', 'Year', 'Institution', 'Where')
 detailed_entries(data = temp, what = Degree, when = Year,with =  Institution, where = Where)
 ```
 
+
+
 # Experience
 
+```{r experience}
 
+library(data.table)
+library(glue)
+library(lubridate)
 
-```{r}
+job_titles <- data.table::fread(here::here("data/job-titles.csv"), sep = "\t")
 
-jobs <- read.delim(here::here("data/job-titles.csv"),sep = "\t")
+job_descriptions <- data.table::fread(here::here("data/job-descriptions.csv"), sep = ",")
 
-jobs$begin <- as.character(format(as.Date(jobs$begin), format="%Y"))
-jobs$end <- as.character(format(as.Date(jobs$end), format="%Y"))
-jobs$end[is.na(jobs$end)] <- "Current"
+keycol <-c("begin","descId")
 
-jobs$duration <- paste0(jobs$begin, "-", jobs$end)
+jobs <- merge(job_titles, job_descriptions, by = "jobId", all.x = T) 
+setorderv(jobs, keycol, order=c(-1, 1))
 
-
-detailed_entries(data = jobs[order(jobs$end, decreasing = T), ], what = position, when = duration,with =  employer, where = department)
+    
+  detailed_entries(jobs,
+    what = position,
+    when = as.character(
+      glue("{lubridate::month(begin, label = TRUE, abbr = TRUE)} {lubridate::year(begin)} - 
+           {ifelse(!is.na(end), 
+           paste(lubridate::month(end, label = TRUE, abbr = TRUE), lubridate::year(end)), 'present')}")),
+    with = employer,
+    where = glue("{city}, {region}, {country}"),
+    why = accomplishments)
 ```
 
-# Recent Solo Projects
+\newpage
+
+# Skills
+
+```{r}
+library(dplyr)
+skills <- fread("../data/skills.csv")
+
+skills_formatted <- skills %>% 
+  mutate(skill = if_else(is.na(details), glue("{skill}"), glue("{skill} ({details})"))) %>% 
+  group_by(group) %>% 
+  summarize(skills = glue_collapse(skill, sep = " $\\bullet$ "))
+skills_formatted$skills <- gsub("()", "",skills_formatted$skills,fixed = TRUE)
+```
+
+```{r, results='asis', width = 40000}
+for (group in skills_formatted$group) {
+  cat(
+    glue("\\textbf{<<tools::toTitleCase(group)>>}:", .open = "<<", .close = ">>"),
+    filter(skills_formatted, group == !!group)$skills,
+    "\n\n\n"
+  )
+}
+```
+
+
+# Select Individual Software Projects
 
 ```{r}
 
@@ -88,23 +112,13 @@ detailed_entries(data = software[order(software$year, decreasing = T),], what = 
 
 ```
 
-# Recent Team Projects
+# Select Team Software Projects
 
 ```{r}
 
 software <- read.delim(here::here("data/software.csv"),sep = "\t")
 software <- software[software$group == "team",  ]
 detailed_entries(data = software[order(software$year, decreasing = T),], what = name, when = year,with =  language, where = description)
-
-```
-
-# Awards
-
-```{r}
-
-grants <- read.delim(here::here("data/awards.csv"),sep = "\t")
-
-brief_entries(data = grants, what = award, when = year, with = amount)
 
 ```
 
@@ -115,22 +129,21 @@ brief_entries(data = grants, what = award, when = year, with = amount)
 oral <- read.delim(here::here("data/oral_contributed.csv"),sep = "\t")
 
 
-brief_entries(data = oral[order(as.Date(oral$year), decreasing = T),], what = title, when = year, with = meeting)
+detailed_entries(data = oral[order(as.Date(oral$year), decreasing = T),], what = meeting, when = year, why = title)
 
 
 ```
 
-# Poster Presentations
 
+# Awards
 
 ```{r}
-posters <- read.delim(here::here("data/poster_presentations.csv"),sep = "\t")
 
-detailed_entries(data = posters[order(as.Date(posters$year), decreasing = T),], what = title, when = year, with =location , where = meeting)
+grants <- read.delim(here::here("data/awards.csv"),sep = "\t")
+
+brief_entries(data = grants, what = award, when = year, with = amount)
 
 ```
-
-
 
 # Publications
 
@@ -186,3 +199,5 @@ for (i in publications_bibtex){
 bibliography_entries(bibfilepath)
 
 ```
+
+

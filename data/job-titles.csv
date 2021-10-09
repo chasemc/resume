@@ -1,6 +1,6 @@
 jobId	begin	end	position	employer	department	city	region	country	supervisor
 1	2008-08-01	2012-05-01	Bonner Scholar	Bonner Foundation		Rome	GA	US	
-2	2013-03-01	2015-08-01	Research and Development Technician	Deerland Enzymes	R&D, Method Development	Kennesaw	GA	US	John Deaton
+2	2013-03-01	2015-08-01	Research and Development Technician	Deerland Probiotics & Enzymes	R&D, Method Development	Kennesaw	GA	US	John Deaton
 3	2015-08-01	2020-08-31	Ph.D. Student	University of Illinois at Chicago	Medicinal Chemistry and Pharmacognosy	Chicago	IL	US	Brian Murphy
 4	2019-05-01	2020-08-31	F31 Fellow	U.S. National Institutes of Health (NIH)	National Center for Complementary and Integrative Health	Chicago	IL	US	Brian Murphy
 5	2020-09-01		Postdoctoral Research Associate	University of Wisconsin-Madison	School of Pharmacy, Pharmaceutical Sciences Division	Remote	Chicago	IL	Jason Kwan
