@@ -27,3 +27,5 @@ curl
 ENV R_PACKAGES='c("rmarkdown","vitae", "data.table", "glue", "lubridate", "dplyr", "jsonlite", "rorcid", "here", "tinytex")'
 RUN echo 'options("repos"="https://mran.microsoft.com/snapshot/2022-03-02")' >> /usr/local/lib/R/etc/Rprofile.site
 RUN Rscript -e "install.packages(${R_PACKAGES}, Ncpus=parallel::detectCores())"
+RUN Rscript -e "update.packages(ask = FALSE, checkBuilt = TRUE)"
+RUN Rscript -e "tinytex::tlmgr_update()"
