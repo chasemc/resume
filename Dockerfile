@@ -20,6 +20,7 @@ libxt6 \
 texlive-latex-base \
 texlive-latex-recommended \
 texlive-fonts-recommended \
+texlive-fonts-extra \
 curl
 
 # R packages
