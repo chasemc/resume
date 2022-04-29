@@ -234,3 +234,18 @@ close(con)
 ```{r bibliography}
 bibliography_entries(bibfilepath)
 ```
+
+# Teaching
+
+## Invited Guest Lectures
+
+```{r teaching-invited}
+# year	university	course
+invited_guest_lecture <- data.table::fread(here::here("data/invited_guest_lecture.tsv"), sep = "\t")
+
+detailed_entries(data = invited_guest_lecture[order((invited_guest_lecture$year), decreasing = T),],
+                 what = course, 
+                 when = year,
+                 where = university)
+```
+
