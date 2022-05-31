@@ -22,8 +22,6 @@ jobs:
         env:
           ORCID_TOKEN: ${{ secrets.ORCID_TOKEN }}
         run: |
-          Rscript -e  'install.packages("tinytex")'
-          Rscript -e  'tinytex::install_tinytex()'
           Rscript -e  'rmarkdown::render("resume/resume.Rmd")'
           Rscript -e  'rmarkdown::render("cv/cv.Rmd")'
           mv resume.pdf resume/resume.pdf
