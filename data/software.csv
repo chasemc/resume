@@ -6,5 +6,5 @@ year	name	description	link	language	group	contribution
 2019	mzPlotter 	Automated summary of of LC-MS/MS data with interactive Rmarkdown reports	github.com/chasemc/mzPlotter	R, Rmarkdown	solo	Creator/Maintainer
 2019	mzFromImage	Predict a mass spectrum’s values from a static image file	github.com/chasemc/mzFromImage	R, Shiny	solo	Creator/Maintainer
 2021	metaBenchmarks	Benchmark metagenomic profiling/binning software	github.com/KwanLab/metaBenchmarks	Nextflow	team	Creator, teaching, leading effort
-2021	socialgene	Repository-scale genome pattern search platform 	unreleased	Python, Django, Nextflow, High-throughput computing 	solo	Creator/Maintainer
+2022	socialgene	Repository-scale genome pattern search platform 	unreleased	Python, Django, Nextflow, Rust, High-throughput computing 	solo	Creator/Maintainer
 2019	mgfparse	Low-dependency R package for quickly and efficiently parsing mgf files into R	https://github.com/chasemc/mgfparse	R	solo	Creator/Maintainer
