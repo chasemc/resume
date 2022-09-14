@@ -26,3 +26,8 @@ Rscript -e  'rmarkdown::render("resume/resume.Rmd")'
           Rscript -e  'rmarkdown::render("resume/cv/cv.Rmd")'
           mv resume.pdf resume/resume.pdf
           mv cv.pdf cv/cv.pdf
+          
+          
+          
+
+ Rscript -e  'rmarkdown::render("resume/cv/cv.Rmd")'

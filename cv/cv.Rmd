@@ -31,7 +31,7 @@ rorcid::orcid_educations("0000-0001-6439-9397")$`0000-0001-6439-9397`$`affiliati
   pipe_assign() -> orcid_data
 ```
 
-# Employment
+# Education
 
 ```{r employment}
 temp <- cbind.data.frame(orcid_data[, c('education-summary.role-title','education-summary.end-date.year.value',
@@ -52,7 +52,7 @@ detailed_entries(data = temp,
                  where = Where)
 ```
 
-# Experience
+# Employment
 
 ```{r experience}
 job_titles <- data.table::fread(here::here("data", "job-titles.csv"), sep = "\t")
@@ -81,7 +81,7 @@ vitae::detailed_entries(jobs,
 ```
 
 \newpage
-
+<!-- 
 # Skills
 
 ```{r, skills, results='asis', width = 40000}
@@ -103,7 +103,7 @@ for (group in skills_formatted$group) {
   )
 }
 ```
-
+-->
 # Select Individual Software Projects
 
 ```{r software-individual}
@@ -154,7 +154,7 @@ detailed_entries(data = oral[order(as.Date(oral$year), decreasing = T),],
 ongoing <- data.table::fread(here::here("data/ongoing_projects.csv"), sep = "\t", fill=T)
 
 detailed_entries(data = ongoing,
-                 what = description, 
+                 what = description,
                  when = name)
 #                 why = status)
 
@@ -165,7 +165,11 @@ detailed_entries(data = ongoing,
 
 grants <- data.table::fread(here::here("data/awards.csv"), sep = "\t", fill=T)
 
-brief_entries(data =  grants[order(vapply(strsplit(grants$year, "-"), function(x) as.integer(x[[1]]), 1), decreasing = T),],
+grants$end <- ifelse(is.na(grants$end), "present", grants$end)
+grants$year <- ifelse(is.na(grants$begin), grants$end, paste0(grants$begin, "-", grants$end))
+
+
+brief_entries(data =  grants[order(grants$end, decreasing = T),],
               what = award,
               when = year,
               with = amount)
@@ -268,6 +272,16 @@ close(con)
 ```{r bibliography}
 bibliography_entries(bibfilepath)
 ```
+
+# Submitted Publications
+
+
+- "Artificial Intelligence Approaches to Natural Product Drug Discovery" (Submitted to Nature Reviews Drug Discovery)
+  - Michael W. Mullowney, Katherine R. Duncan, Somayah S. Elsayed, Neha Garg, Justin J.J. van der Hooft, Nathaniel I. Martin, David Meijer, Barbara Terlouw, Friederike Biermann, Kai Blin, Janani Durairaj, Marina Gorostiola González, Eric J.N. Helfrich, Florian Huber, Stefan Leopold-Messer, Kohulan Rajan, Tristan de Rond, Jeffrey A. van Santen, Maria Sorokina, Marcy J. Balunas, Mehdi A. Beniddir, Doris van Bergeijk, Laura M. Carroll, **Chase M. Clark**, Chris Dejong, Chao Du, Scarlet Ferrinho, Francesca Grisoni, Albert Hofstetter, Willem Jespers, Olga V. Kalinina, Satria A. Kautsar, Tiago F. Leao, Joleen Masschelein, Evan R. Rees, Raphael Reher, Daniel Reker, Philippe Schwaller, Marwin Segler, Michael A. Skinnider, Allison S. Walker, Egon Willighagen, Barbara Zdrazil, Nadine Ziemert, Rebecca J.M. Goss, Pierre Guyomard, Andrea Volkamer, William H. Gerwick, Hyun Uk Kim, Rolf Müller, Gilles P. van Wezel, Gerard van Westen, Anna K.H. Hirsch, Roger Linington, Serina L. Robinson, Marnix H. Medema
+
+
+
+
 
 # Teaching
 
