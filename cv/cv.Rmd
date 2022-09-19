@@ -1,5 +1,5 @@
 ---
-name: Chase Clark
+name: Chase M Clark
 address: "University of Wisconsin-Madison, School of Pharmacy"
 www: chasemc.github.io
 email: "chasingmicrobes@gmail.com"
@@ -104,61 +104,7 @@ for (group in skills_formatted$group) {
 }
 ```
 -->
-# Select Individual Software Projects
 
-```{r software-individual}
-
-software <- data.table::fread(here::here("data/software.csv"), sep = "\t")
-
-software <- software[software$group == "solo", ]
-
-detailed_entries(data = software[order(software$year, decreasing = T),],
-                 what = name,
-                 when = year,
-                 with = language,
-                 where = description)
-```
-
-# Select Team Software Projects
-
-```{r software-team}
-
-software <- data.table::fread(here::here("data/software.csv"), sep = "\t")
-
-software <- software[software$group == "team", ]
-
-detailed_entries(data = software[order(software$year, decreasing = T),], 
-                 what = name,
-                 when = year,
-                 with = language,
-                 where = description)
-
-```
-
-# Talks
-
-```{r talks}
-
-oral <- data.table::fread(here::here("data/oral_contributed.csv"), sep = "\t")
-
-detailed_entries(data = oral[order(as.Date(oral$year), decreasing = T),],
-                 what = meeting, 
-                 when = year,
-                 why = title)
-```
-
-# In-Progress
-
-```{r ongoing}
-
-ongoing <- data.table::fread(here::here("data/ongoing_projects.csv"), sep = "\t", fill=T)
-
-detailed_entries(data = ongoing,
-                 what = description,
-                 when = name)
-#                 why = status)
-
-```
 # Funding/Awards
 
 ```{r awards}
@@ -174,44 +120,6 @@ brief_entries(data =  grants[order(grants$end, decreasing = T),],
               when = year,
               with = amount)
 
-```
-
-# Workshops (host)
-
-```{r workshops1}
-#workshops <- data.table::fread(here::here("data/workshops_led.csv"), sep = "\t")
-#
-#setorderv(workshops,
-#          c("begin"),
-#          order=-1)
-#
-#detailed_entries(workshops,
-#                 what = name,
-#                 when = as.character(
-#                   glue("{lubridate::month(begin, label = TRUE, abbr = TRUE)} {lubridate::year(begin)} "))
-#)
-
-workshops <- data.table::fread(here::here("data/workshops_led.csv"), sep = "\t")
-
-detailed_entries(data = workshops[order(as.Date(workshops$year), decreasing = T),],
-                 what = meeting, 
-                 when = year,
-                 why = title)
-```
-
-# Workshops (participant)
-```{r workshops}
-workshops <- data.table::fread(here::here("data/workshops_participant.csv"), sep = "\t")
-
-setorderv(workshops,
-          c("begin"),
-          order=-1)
-
-detailed_entries(workshops,
-                 what = name,
-                 when = as.character(
-                   glue("{lubridate::month(begin, label = TRUE, abbr = TRUE)} {lubridate::year(begin)} "))
-)
 ```
 
 # Publications
@@ -281,6 +189,102 @@ bibliography_entries(bibfilepath)
 
 
 
+# Talks
+
+```{r talks}
+
+oral <- data.table::fread(here::here("data/oral_contributed.csv"), sep = "\t")
+
+detailed_entries(data = oral[order(as.Date(oral$year), decreasing = T),],
+                 what = meeting, 
+                 when = as.character(glue("{lubridate::month(year, label = TRUE, abbr = TRUE)} {lubridate::year(year)} ")),
+                 why = title)
+```
+
+
+# In-Progress
+
+```{r ongoing}
+
+ongoing <- data.table::fread(here::here("data/ongoing_projects.csv"), sep = "\t", fill=T)
+
+detailed_entries(data = ongoing,
+                 what = description,
+                 when = name)
+#                 why = status)
+
+```
+
+# Select Individual Software Projects
+
+```{r software-individual}
+
+software <- data.table::fread(here::here("data/software.csv"), sep = "\t")
+
+software <- software[software$group == "solo", ]
+
+detailed_entries(data = software[order(software$year, decreasing = T),],
+                 what = name,
+                 when = year,
+                 with = language,
+                 where = description)
+```
+
+# Select Team Software Projects
+
+```{r software-team}
+
+software <- data.table::fread(here::here("data/software.csv"), sep = "\t")
+
+software <- software[software$group == "team", ]
+
+detailed_entries(data = software[order(software$year, decreasing = T),], 
+                 what = name,
+                 when = year,
+                 with = language,
+                 where = description)
+
+```
+
+
+# Workshops (host)
+
+```{r workshops1}
+#workshops <- data.table::fread(here::here("data/workshops_led.csv"), sep = "\t")
+#
+#setorderv(workshops,
+#          c("begin"),
+#          order=-1)
+#
+#detailed_entries(workshops,
+#                 what = name,
+#                 when = as.character(
+#                   glue("{lubridate::month(begin, label = TRUE, abbr = TRUE)} {lubridate::year(begin)} "))
+#)
+
+workshops <- data.table::fread(here::here("data/workshops_led.csv"), sep = "\t")
+
+detailed_entries(data = workshops[order(as.Date(workshops$year), decreasing = T),],
+                 what = meeting, 
+                 when = as.character(glue("{lubridate::month(year, label = TRUE, abbr = TRUE)} {lubridate::year(year)} ")),
+                 why = title)
+```
+\newpage
+
+# Workshops (participant)
+```{r workshops}
+workshops <- data.table::fread(here::here("data/workshops_participant.csv"), sep = "\t")
+
+setorderv(workshops,
+          c("begin"),
+          order=-1)
+
+detailed_entries(workshops,
+                 what = name,
+                 when = as.character(glue("{lubridate::month(begin, label = TRUE, abbr = TRUE)} {lubridate::year(begin)} "))
+)
+```
+
 
 
 # Teaching
@@ -297,3 +301,23 @@ detailed_entries(data = invited_guest_lecture[order((invited_guest_lecture$year)
                  where = university)
 ```
 
+# Peer Review
+
+- Journal of Natural Products
+
+- CRC press
+
+- rOpenSci
+
+- Microbiology Spectrum
+
+# Memberships/Professional Affiliations
+
+- American Society of Pharmacognosy
+- Chicago R User Group
+- Chicago Python User group
+
+---
+
+The code for building this CV is available at:
+https://github.com/chasemc/resume

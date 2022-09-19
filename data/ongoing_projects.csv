@@ -1,9 +1,8 @@
 year	name	description	status	link
-2022	IDBacDB Manuscript	Web resource for sharing and searching FAIR MALDI-MS microbial spectra (a resource requested within many papers for many years now)	..	https://www.idbac.org/
+2022	IDBacDB Manuscript	Web resource for sharing and searching FAIR MALDI-MS microbial spectra 	..	https://www.idbac.org/
 2022	SocialGene Manuscript	Repository-scale analyses of protein similarity	..	https://socialgene.github.io/home/	
-2022	clusterrule Manuscript	Initiated a multi-national collaboration to create a standardized collection of HMM models	..
-2022	Worshop Manuscript	Artificial Intelligence Approaches to Natural Product Drug Discovery	..	https://www.lorentzcenter.nl/artificial-intelligence-for-natural-product-drug-discovery.html
-2022	Autometa 2.0 Manuscript	Code standardization and enhancements including addition of Nextflow pipleine	..	https://github.com/KwanLab/Autometa/
-2022	Metagenomics Review Manuscript	Co-writing a review on genome resolved metagnomics and natural product discovery	..	
-2022	Transcriptomics	Mapping transcriptional regulation in Micromonospora	..	
-2022	Metagenomics	Independent metagnomics software development project	..	
+2022	clusterrule Manuscript	Multinational collaboration to create a standardized collection of NP HMM models	..
+2022	Autometa 2.0 Manuscript	Code standardization and enhancements including addition of a Nextflow pipleine	..	https://github.com/KwanLab/Autometa/
+2022	Metagenomics Review Manuscript	Co-writing a review on genome resolved metagenomics and natural product discovery	..	
+2022	Transcriptomics	Mapping transcriptional regulation in Actinobacteria	..	
+2022	Metagenomics	Improving multisample genome resolved metagenomics	..	
