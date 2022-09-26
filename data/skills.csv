@@ -15,11 +15,6 @@ software development,automated testing,"testthat, pytest, etc"
 cloud computing,remote server computing,"ssh, etc"
 cloud computing,high-performance and high-throughput computing,"Open science grid, HTCondor"
 statistics,machine learning,
-statistics,data analysis,
-statistics,cluster analysis,
-statistics,factor analysis,
-statistics,principal components analysis,
-statistics,cross-validation,
 statistics,experimental design,
 bioinformatics, metabomics,
 bioinformatics, genomics,
