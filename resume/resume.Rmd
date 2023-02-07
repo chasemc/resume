@@ -151,7 +151,7 @@ detailed_entries(data = oral[order(as.Date(oral$year), decreasing = T),],
 
 ```{r awards}
 
-grants <- data.table::fread(here::here("data/awards.csv"), sep = "\t")
+grants <- data.table::fread(here::here("data/awards.csv"), sep = "\t", fill=T)
 
 
 brief_entries(data = grants[order(vapply(strsplit(grants$year, "-"), function(x) as.integer(x[[1]]), 1), decreasing = T),],
