@@ -153,8 +153,11 @@ detailed_entries(data = oral[order(as.Date(oral$year), decreasing = T),],
 
 grants <- data.table::fread(here::here("data/awards.csv"), sep = "\t", fill=T)
 
+grants$end <- ifelse(is.na(grants$end), "present", grants$end)
+grants$year <- ifelse(is.na(grants$begin), grants$end, paste0(grants$begin, "-", grants$end))
 
-brief_entries(data = grants[order(vapply(strsplit(grants$year, "-"), function(x) as.integer(x[[1]]), 1), decreasing = T),],
+
+brief_entries(data =  grants[order(grants$end, decreasing = T),],
               what = award,
               when = year,
               with = amount)
