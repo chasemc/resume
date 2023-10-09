@@ -20,33 +20,32 @@ library(glue)
 library(lubridate)
 library(dplyr)
 library(jsonlite)
-library(rorcid)
-orcid_auth()
+library(httr2)
 pipe_assign <- function(x) x
 ```
 
 
 ```{r orcid-data}
-rorcid::orcid_educations("0000-0001-6439-9397")$`0000-0001-6439-9397`$`affiliation-group`$summaries |>
-  data.table::rbindlist(fill = T) |>
-  pipe_assign() -> orcid_data
+url <- "https://pub.orcid.org/v3.0/0000-0001-6439-9397/educations"
+resp <- request(url) %>% req_headers(Accept = "application/vnd.orcid+json")  %>% req_perform() %>% resp_body_json() 
+a <- sapply(resp$`affiliation-group`, function(x) x$summaries)
+a <- lapply(a, function(x) {list(
+    "Degree" = x$`education-summary`$`role-title`,
+    "Year" = x$`education-summary`$`start-date`$year$value,
+    "Institution"= x$`education-summary`$organization$name,
+    "Where" = paste0(
+        x$`education-summary`$organization$address$city,
+        ", ",
+        x$`education-summary`$organization$address$region
+    )
+)})
+orcid_data <- data.table::rbindlist(a, fill=TRUE)
 ```
 
 # Employment
 
 ```{r employment}
-temp <- cbind.data.frame(orcid_data[, c('education-summary.role-title','education-summary.end-date.year.value',
-                                        'education-summary.organization.name')], 
-                         paste0(orcid_data$'education-summary.organization.address.city',
-                                ", ",
-                                orcid_data$'education-summary.organization.address.region' ))
-
-colnames(temp) <- c('Degree',
-                    'Year',
-                    'Institution',
-                    'Where')
-
-detailed_entries(data = temp,
+detailed_entries(data = orcid_data,
                  what = Degree, 
                  when = Year,
                  with =  Institution,

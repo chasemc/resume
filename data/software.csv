@@ -1,10 +1,10 @@
 year	name	description	link	language	group	contribution
 2019	electricShine	Shiny packaging with Electron	chasemc.github.io/electricShine	R, Javascript, Node/Electron	solo	Creator/Maintainer
-2018	IDBac	MALDI protein and small molecule bioinformatics platform	chasemc.github.io/IDBac	R, Shiny, Electron	solo	Creator/Maintainer
-2020-2022	Autometa	Automated binning pipeline for single metagenomes	github.com/KwanLab/Autometa	Python, Nextflow	team	Rewrite pipeline as Nextflow pipeline https://github.com/KwanLab/Autometa/pull/157
+2018-2023	IDBac	MALDI protein and small molecule bioinformatics platform	chasemc.github.io/IDBac	R, Shiny, Electron	solo	Creator/Maintainer
+2020-2023	Autometa	Automated binning pipeline for single metagenomes	github.com/KwanLab/Autometa	Python, Nextflow	team	Rewrite pipeline as Nextflow pipeline https://github.com/KwanLab/Autometa/pull/157
 2019	mzEasy	Shiny app for converting and visualizing mass spectrometry data	github.com/chasemc/mzEasy	R, Shiny	solo	Creator/Maintainer
 2019	mzPlotter 	Automated summary of of LC-MS/MS data with interactive Rmarkdown reports	github.com/chasemc/mzPlotter	R, Rmarkdown	solo	Creator/Maintainer
 2019	mzFromImage	Predict a mass spectrum’s values from a static image file	github.com/chasemc/mzFromImage	R, Shiny	solo	Creator/Maintainer
 2021	metaBenchmarks	Benchmark metagenomic profiling/binning software	github.com/KwanLab/metaBenchmarks	Nextflow	team	Creator, teaching, leading effort
-2022	socialgene	Repository-scale genome pattern search platform 	unreleased	Python, Django, Nextflow, Rust, High-throughput computing 	solo	Creator/Maintainer
+2021-2023	socialgene	Repository-scale genome pattern search platform 	unreleased	Python, Django, Nextflow, Rust, High-throughput computing 	solo	Creator/Maintainer
 2019	mgfparse	Low-dependency R package for quickly and efficiently parsing mgf files into R	https://github.com/chasemc/mgfparse	R	solo	Creator/Maintainer

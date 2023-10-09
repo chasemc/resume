@@ -19,33 +19,32 @@ library(glue)
 library(lubridate)
 library(dplyr)
 library(jsonlite)
-library(rorcid)
-orcid_auth()
+library(httr2)
 pipe_assign <- function(x) x
 ```
 
 
 ```{r orcid-data}
-rorcid::orcid_educations("0000-0001-6439-9397")$`0000-0001-6439-9397`$`affiliation-group`$summaries |>
-  data.table::rbindlist(fill = T) |>
-  pipe_assign() -> orcid_data
+url <- "https://pub.orcid.org/v3.0/0000-0001-6439-9397/educations"
+resp <- request(url) %>% req_headers(Accept = "application/vnd.orcid+json")  %>% req_perform() %>% resp_body_json() 
+a <- sapply(resp$`affiliation-group`, function(x) x$summaries)
+a <- lapply(a, function(x) {list(
+    "Degree" = x$`education-summary`$`role-title`,
+    "Year" = x$`education-summary`$`start-date`$year$value,
+    "Institution"= x$`education-summary`$organization$name,
+    "Where" = paste0(
+        x$`education-summary`$organization$address$city,
+        ", ",
+        x$`education-summary`$organization$address$region
+    )
+)})
+orcid_data <- data.table::rbindlist(a, fill=TRUE)
 ```
 
 # Education
 
 ```{r employment}
-temp <- cbind.data.frame(orcid_data[, c('education-summary.role-title','education-summary.end-date.year.value',
-                                        'education-summary.organization.name')], 
-                         paste0(orcid_data$'education-summary.organization.address.city',
-                                ", ",
-                                orcid_data$'education-summary.organization.address.region' ))
-
-colnames(temp) <- c('Degree',
-                    'Year',
-                    'Institution',
-                    'Where')
-
-detailed_entries(data = temp,
+detailed_entries(data = orcid_data,
                  what = Degree, 
                  when = Year,
                  with =  Institution,
@@ -105,7 +104,7 @@ for (group in skills_formatted$group) {
 ```
 -->
 
-# Funding/Awards
+# Select Funding/Awards
 
 ```{r awards}
 
@@ -160,33 +159,29 @@ publications_bibtex <- lapply(seq_along(pubs),
 
 publications_bibtex <- publications_bibtex[keys]
 
-bibfilepath="pubs.bib"
+bibfilepath=here::here("data","pubs.bib")
 
 if (file.exists(bibfilepath)){
   file.remove(bibfilepath)
 }
 
-con = file(description = bibfilepath, open = "a", blocking = TRUE,
+con = file(description = bibfilepath, open = "w", blocking = TRUE,
            encoding = "UTF-8", raw = FALSE)
 
+
+a=readLines(here::here("data","artificial_intelligence.bib"))
+writeLines(a,con)
 for (i in publications_bibtex){
   writeLines(i,con)
 }
-
 close(con)
 
 ```
 
 ```{r bibliography}
+bibfilepath=here::here("data","pubs.bib")
 bibliography_entries(bibfilepath)
 ```
-
-# Submitted Publications
-
-
-- "Artificial Intelligence Approaches to Natural Product Drug Discovery" (Submitted to Nature Reviews Drug Discovery)
-  - Michael W. Mullowney, Katherine R. Duncan, Somayah S. Elsayed, Neha Garg, Justin J.J. van der Hooft, Nathaniel I. Martin, David Meijer, Barbara Terlouw, Friederike Biermann, Kai Blin, Janani Durairaj, Marina Gorostiola González, Eric J.N. Helfrich, Florian Huber, Stefan Leopold-Messer, Kohulan Rajan, Tristan de Rond, Jeffrey A. van Santen, Maria Sorokina, Marcy J. Balunas, Mehdi A. Beniddir, Doris van Bergeijk, Laura M. Carroll, **Chase M. Clark**, Chris Dejong, Chao Du, Scarlet Ferrinho, Francesca Grisoni, Albert Hofstetter, Willem Jespers, Olga V. Kalinina, Satria A. Kautsar, Tiago F. Leao, Joleen Masschelein, Evan R. Rees, Raphael Reher, Daniel Reker, Philippe Schwaller, Marwin Segler, Michael A. Skinnider, Allison S. Walker, Egon Willighagen, Barbara Zdrazil, Nadine Ziemert, Rebecca J.M. Goss, Pierre Guyomard, Andrea Volkamer, William H. Gerwick, Hyun Uk Kim, Rolf Müller, Gilles P. van Wezel, Gerard van Westen, Anna K.H. Hirsch, Roger Linington, Serina L. Robinson, Marnix H. Medema
-
 
 
 # Talks
@@ -196,9 +191,9 @@ bibliography_entries(bibfilepath)
 oral <- data.table::fread(here::here("data/oral_contributed.csv"), sep = "\t")
 
 detailed_entries(data = oral[order(as.Date(oral$year), decreasing = T),],
-                 what = meeting, 
+                 why = meeting, 
                  when = as.character(glue("{lubridate::month(year, label = TRUE, abbr = TRUE)} {lubridate::year(year)} ")),
-                 why = title)
+                 what = title)
 ```
 
 
@@ -269,7 +264,7 @@ detailed_entries(data = workshops[order(as.Date(workshops$year), decreasing = T)
                  when = as.character(glue("{lubridate::month(year, label = TRUE, abbr = TRUE)} {lubridate::year(year)} ")),
                  why = title)
 ```
-\newpage
+
 
 # Workshops (participant)
 ```{r workshops}
