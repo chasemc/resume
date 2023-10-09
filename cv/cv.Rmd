@@ -168,9 +168,11 @@ if (file.exists(bibfilepath)){
 con = file(description = bibfilepath, open = "w", blocking = TRUE,
            encoding = "UTF-8", raw = FALSE)
 
-
+# messed up encoding or too many authors, will have to actually fix pub ordering with next pub
 a=readLines(here::here("data","artificial_intelligence.bib"))
 writeLines(a,con)
+
+
 for (i in publications_bibtex){
   writeLines(i,con)
 }
