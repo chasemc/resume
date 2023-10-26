@@ -7,12 +7,8 @@ twitter: ChasingMicrobes
 github: chasemc
 linkedin: hirechase
 date: "`r format(Sys.time(), '%B %Y')`"
-csl: apa-cv.csl # change this if you want to use other citation styles
-output: 
-  vitae::awesomecv:
-    keep_tex: false
-    pandoc_args: ["--lua-filter=../lua/strong.lua"]
-# output: function(...) {source('resume_entries.R');vitae:::set_entry_formats(resume_entries);vitae::cv_document(..., template = "resume_template.tex", citation_package = "biblatex")}
+# csl: apa-cv.csl # change this if you want to use other citation styles
+output: function(...) {source('resume_entries.R');vitae:::set_entry_formats(resume_entries);vitae::cv_document(..., template = "resume_template.tex", citation_package = "biblatex")}
 ---
 
 ```{r setup, include=FALSE}
@@ -35,7 +31,8 @@ resp <- request(url) %>% req_headers(Accept = "application/vnd.orcid+json")  %>%
 a <- sapply(resp$`affiliation-group`, function(x) x$summaries)
 a <- lapply(a, function(x) {list(
     "Degree" = x$`education-summary`$`role-title`,
-    "Year" = x$`education-summary`$`start-date`$year$value,
+    "begin" = x$`education-summary`$`start-date`$year$value,
+    "end" = x$`education-summary`$`end-date`$year$value,
     "Institution"= x$`education-summary`$organization$name,
     "Where" = paste0(
         x$`education-summary`$organization$address$city,
@@ -51,7 +48,7 @@ orcid_data <- data.table::rbindlist(a, fill=TRUE)
 ```{r employment}
 detailed_entries(data = orcid_data,
                  what = Degree, 
-                 when = Year,
+                  when = ifelse(begin==end, begin, as.character(paste0(begin,"-", end))),
                  with =  Institution,
                  where = Where)
 ```
@@ -72,13 +69,13 @@ data.table::setorderv(jobs,
                       c("begin","descId"),
                       order=c(-1, 1))
 
-
 vitae::detailed_entries(jobs,
                         what = position,
                         when = as.character(
-                          glue("{lubridate::month(begin, label = TRUE, abbr = TRUE)} {lubridate::year(begin)} - 
-           {ifelse(!is.na(end), 
-           paste(lubridate::month(end, label = TRUE, abbr = TRUE), lubridate::year(end)), 'present')}")),
+                              glue("{lubridate::month(begin, label = TRUE, abbr = TRUE)} {lubridate::year(begin)} - 
+                              {ifelse(!is.na(end), 
+                                paste(lubridate::month(end, label = TRUE, abbr = TRUE), lubridate::year(end)), 'present')
+                          }")),
            with = employer,
            where = glue("{city}, {region}, {country}"),
            why = accomplishments)
@@ -204,7 +201,19 @@ detailed_entries(data = oral[order(as.Date(oral$year), decreasing = T),],
 ```
 
 
-# In-Progress
+# Conference Posters (only primary author and personally presented)
+
+```{r posters}
+
+posters <- data.table::fread(here::here("data/poster_presentations.csv"), sep = "\t")
+
+detailed_entries(data = posters[order(as.Date(posters$year), decreasing = T),],
+                 why = meeting, 
+                 when = as.character(glue("{lubridate::month(year, label = TRUE, abbr = TRUE)} {lubridate::year(year)} ")),
+                 what = title)
+```
+
+# In Progress
 
 ```{r ongoing}
 

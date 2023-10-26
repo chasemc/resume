@@ -1,8 +1,8 @@
 year	meeting	city	state	country	title
 2015-04-15	SSAOAC Annual Meeting	Atlanta	GA	USA	HPLC-DAD Method for Trace Detection of Benzoic and Sorbic Acids in High Protein Matrices
 2016-07-22	Chicago Mass Spec Day	Chicago	IL	USA	Use of MALDI-MS to Create 'Smart' Libraries for Drug-Lead Discovery
-2016-11-03	UIC Specialized Metabolite Community	Chicago	IL	USA	Rational design of bacterial strain libraries for drug discovery
-2017-03-09	Center for Biomolecular Sciences, UIC	Chicago	IL	USA	IDBac: A proteomic & chemometric pipeline for rapid bacterial characterization
+2016-11-03	UIC Specialized Metabolite Community	Chicago	IL	USA	Rational Design of Bacterial Strain Libraries for Drug Discovery
+2017-03-09	Center for Biomolecular Sciences, UIC	Chicago	IL	USA	IDBac: A Proteomic & Chemometric Pipeline for Rapid Bacterial Characterization
 2018-01-27	Chicago R User Group	Chicago	IL	USA	IDBac: A Shiny App to Analyze Bacterial Fingerprints and Aid in the Discovery of Potential New Antibiotics
 2018-08-15	R/Pharma, Harvard University	Cambridge	MA	USA	IDBac: A New Paradigm in Developing Microbial Libraries for Drug Discovery
 2019-04-27	satRdays Chicago	Chicago	IL	USA	Bioinformatics in R
@@ -13,10 +13,10 @@ year	meeting	city	state	country	title
 2020-02-25	Gordon Research Conference on Marine Natural Products	Ventura	CA	USA	IDBac: Bioinformatics Software for Microbial Drug Discovery Prioritization and Culturomics Characterization
 2020-05-08	May Institute 2020: Future developers meeting	Online (Covid)			Protein MS isn't the only MS… Programming in R for Metabolomics Mass Spectrometry
 2021-11-02	Computation & Informatics in Biology & Medicine Seminars BMI 915	Online (Covid)			New Computational Tools for Top-Down and Bottom-Up Natural Product Drug Discovery
-2022-03-09	Gordon Research Conference on Marine Natural Products	Ventura	CA	USA	Towards near-instant, repository-scale searching for homologous BGCs with Socialgene (Selected alternate speaker, didn't present)
+2022-03-09	Gordon Research Conference on Marine Natural Products	Ventura	CA	USA	Towards Near-Instant, Repository-Scale Searching for Homologous BGCs with Socialgene (Selected alternate speaker, didn't present)
 2022-06-23	National Library of Medicine (NLM) T15 Training Conference	Buffalo	NY	USA	Large Scale Analysis of Protein Homology for Microbial Drug Discovery
 2023-01-30	Northeastern University Department of Chemistry and Chemical Biology	Boston	MA	USA	Information-Rich Platforms for Natural Product Antibiotic Drug Discovery and Microbial Characterization
 2023-01-30	2023 ASP Younger Members Symposium	Chicago	IL	USA	SocialGene: A Large Scale Search Engine to Find Metagenomic BGCs in Free-Living Organisms
 2023-03-07	Computation and Informatics in Biology and Medicine Seminars	Madison	IL	USA	SocialGene: Large Scale Knowledge Graphs for Microbial Based Drug Discovery
-2023-08-10	Chicago Python User Group	Chicago	IL	USA	Reproducibly building and analyzing knowledge graphs for drug discovery with Nextflow, Neo4j and Python
-2023-09-21	Chicago R User Group	Chicago	IL	USA	 How to write reproducible code for data science
+2023-08-10	Chicago Python User Group	Chicago	IL	USA	Reproducibly Building and Analyzing Knowledge Graphs for Drug Discovery with Nextflow, Neo4j and Python
+2023-09-21	Chicago R User Group	Chicago	IL	USA	How to Write Reproducible Code for Data Science
