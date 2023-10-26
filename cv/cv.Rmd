@@ -12,7 +12,7 @@ output:
   vitae::awesomecv:
     keep_tex: false
     pandoc_args: ["--lua-filter=../lua/strong.lua"]
-
+# output: function(...) {source('resume_entries.R');vitae:::set_entry_formats(resume_entries);vitae::cv_document(..., template = "resume_template.tex", citation_package = "biblatex")}
 ---
 
 ```{r setup, include=FALSE}
