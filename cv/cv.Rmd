@@ -44,7 +44,6 @@ orcid_data <- data.table::rbindlist(a, fill=TRUE)
 ```
 
 # Education
-
 ```{r employment}
 detailed_entries(data = orcid_data,
                  what = Degree, 
@@ -52,7 +51,6 @@ detailed_entries(data = orcid_data,
                  with =  Institution,
                  where = Where)
 ```
-
 # Employment
 
 ```{r experience}
@@ -187,7 +185,6 @@ bibfilepath=here::here("data","pubs.bib")
 bibliography_entries(bibfilepath)
 ```
 
-
 # Talks
 
 ```{r talks}
@@ -199,7 +196,6 @@ detailed_entries(data = oral[order(as.Date(oral$year), decreasing = T),],
                  when = as.character(glue("{lubridate::month(year, label = TRUE, abbr = TRUE)} {lubridate::year(year)} ")),
                  what = title)
 ```
-
 
 # Conference Posters (only primary author and personally presented)
 
@@ -257,7 +253,6 @@ detailed_entries(data = software[order(software$year, decreasing = T),],
 
 ```
 
-
 # Workshops (host)
 
 ```{r workshops1}
@@ -281,8 +276,8 @@ detailed_entries(data = workshops[order(as.Date(workshops$year), decreasing = T)
                  why = title)
 ```
 
-
 # Workshops (participant)
+
 ```{r workshops}
 workshops <- data.table::fread(here::here("data/workshops_participant.csv"), sep = "\t")
 
@@ -295,8 +290,6 @@ detailed_entries(workshops,
                  when = as.character(glue("{lubridate::month(begin, label = TRUE, abbr = TRUE)} {lubridate::year(begin)} "))
 )
 ```
-
-
 
 # Teaching
 
@@ -311,7 +304,6 @@ detailed_entries(data = invited_guest_lecture[order((invited_guest_lecture$year)
                  when = year,
                  where = university)
 ```
-
 # Peer Review
 
 - Journal of Natural Products
