@@ -1,0 +1,458 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt,a4paper,]{awesome-cv}
+
+% Configure page margins with geometry
+\usepackage{geometry}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+
+\colorlet{awesome}{awesome-red}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\def\endfirstpage{\newpage}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\name{Chase M Clark}{}
+
+\address{University of Wisconsin-Madison, School of Pharmacy}
+
+\email{\href{mailto:chasingmicrobes@gmail.com}{\nolinkurl{chasingmicrobes@gmail.com}}}
+\homepage{chasemc.github.io}
+\github{chasemc}
+\linkedin{hirechase}
+\twitter{ChasingMicrobes}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+
+
+\usepackage{booktabs}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+
+
+
+% Pandoc CSL macros
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{2em}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\honortitlestyle{#1}}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\honordatestyle{#1}}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+\makecvfooter
+  {October 2023}
+    {Chase M Clark~~~·~~~Curriculum Vitae}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+
+
+
+\hypertarget{education}{%
+\section{Education}\label{education}}
+
+\begin{cventries}
+    \cventry{PhD Pharmacognosy}{University of Illinois Chicago}{Chicago, IL}{2015}{}\vspace{-4.0mm}
+    \cventry{BS Biochemistry}{Berry College}{Mount Berry, GA}{2008}{}\vspace{-4.0mm}
+    \cventry{Principia Consortium Study Abroad}{University of Glasgow}{Glasgow, Glasgow}{2010}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{employment}{%
+\section{Employment}\label{employment}}
+
+\begin{cventries}
+    \cventry{Computation and Informatics in Biology and Medicine (CIBM) Postdoctoral Fellow}{}{Remote, Chicago, IL}{Jun 2021 - 
+present}{\begin{cvitems}
+\item Appointment to UW-Madison/National Library of Medicine T15 training grant
+\item Developing genomic and metagenomic bioinformatics software
+\item Currently developing a repository-scale analysis platform for comparative genomics
+\end{cvitems}}
+    \cventry{Postdoctoral Research Associate}{University of Wisconsin-Madison}{Remote, Chicago, IL}{Sep 2020 - 
+present}{}\vspace{-4.0mm}
+    \cventry{NIH F31 Fellow}{University of Illinois at Chicago}{Chicago, IL, US}{May 2019 - 
+Aug 2020}{}\vspace{-4.0mm}
+    \cventry{Ph.D. Student}{University of Illinois at Chicago}{Chicago, IL, US}{Aug 2015 - 
+Aug 2020}{\begin{cvitems}
+\item Natural product drug dicovery, specifically bacterial-derived antibiotics
+\item Conceived, learned to code, and built a bioinformatics program (R Shiny app) for rapid bacterial metabolomics analyses
+\item Isolated and cultured 1000’s of bacterial isolates and performed natural product isolation and structure elucidation
+\item First or co-first author on four studies/manuscripts
+\item Mentored undergradaute and graduate students leading to publishable studies
+\end{cvitems}}
+    \cventry{Research and Development Technician}{Deerland Probiotics \& Enzymes}{Kennesaw, GA, US}{Mar 2013 - 
+Aug 2015}{\begin{cvitems}
+\item Assisted in the design and results analysis of three clinical studies
+\item Presented monthly projects to CEO, VP Sales and VP Science \& Technology
+\item Head of method development and identification of raw materials to meet CFR 21, FDA requirements.
+\item Developed identifications for over 140 materials, from enzymes and botanicals to minerals and additives. 
+\item Overhauled the Method Development Department establishing inter-departmental responsibilities, improving and creating new SOPs, streamlining identification requests by establishing a formal request  process and interactive database
+\item Strengthened and created new relationships with third-party vendors, labs, and universities. 
+\item Controlled budget of method development for purchase of standards, consumables, equipment and third-party testing.
+\item Mentored interns from Kennesaw Mountain High School magnet program
+\end{cvitems}}
+    \cventry{Bonner Scholar}{Bonner Foundation}{Rome, GA, US}{Aug 2008 - 
+May 2012}{\begin{cvitems}
+\item Four-year community service scholarship requiring weekly and summer commitments.
+\end{cvitems}}
+\end{cventries}
+
+\newpage
+
+\hypertarget{select-fundingawards}{%
+\section{Select Funding/Awards}\label{select-fundingawards}}
+
+\begin{cvhonors}
+    \cvhonor{}{Computation and Informatics in Biology and Medicine (CIBM) Training Program (T32)}{~\$100,000.00}{2021-present}
+    \cvhonor{}{St. Jude National Graduate Student Symposium (cancelled due to Covid19)}{One of ~40 participants selected from ~1,000 invite-only applications}{2020}
+    \cvhonor{}{NIH Predoctoral Individual National Research Service Award (F31)}{~\$90,000.00}{2019-2020}
+    \cvhonor{}{R/Pharma, Travel Award}{\$500}{2018}
+    \cvhonor{}{W.E. van Doren Scholar}{\$1,000}{2017}
+    \cvhonor{}{American Society of Pharmacognosy Student Travel Award}{\$600}{2017}
+    \cvhonor{}{University of Illinois at Chicago Provost/Deiss Award}{\$2,500}{2017}
+    \cvhonor{}{Bonner Scholar}{Scholarship for students with financial need ``in exchange for weekly commitment to intensive and meaningful service with a local community organization over the four years''}{2008-2012}
+    \cvhonor{}{Academic Scholarship}{}{2008-2012}
+    \cvhonor{}{McCaleb, Hubert Scholarship}{}{2011}
+    \cvhonor{}{Frank Plummer Scholarship}{}{2011}
+    \cvhonor{}{Griggs Academic Scholarship}{}{2010}
+    \cvhonor{}{John R. Bertrand Scholarship}{}{2009}
+    \cvhonor{}{Sierra Club College Scholarship}{}{2008}
+    \cvhonor{}{Cherokee Area Eagle Scout of the Year Scholarship}{}{2008}
+\end{cvhonors}
+
+\hypertarget{publications}{%
+\section{Publications}\label{publications}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-6000}{}}%
+Mullowney, M. W., \ldots, \textbf{Clark, C. M.}.C.M., \ldots, \& Medema,
+M. H. (2023). Artificial intelligence for natural product drug
+discovery. \emph{Nature Reviews Drug Discovery. Citations: 0}.
+\href{https://10.1038/s41573-023-00774-7}{10.1038/s41573-023-00774-7}
+
+\leavevmode\vadjust pre{\hypertarget{ref-6}{}}%
+Rees, E. R., Uppal, S., \textbf{Clark, C. M.}.C.M., Lail, A. J.,
+Waterworth, S. C., Roesemann, S. D., Wolf, K. A., \& Kwan, J. C. (2023).
+Autometa 2: A versatile tool for recovering genomes from highly-complex
+metagenomic communities\emph{. Citations: 0}.
+\href{https://10.1101/2023.09.01.555939}{10.1101/2023.09.01.555939}
+
+\leavevmode\vadjust pre{\hypertarget{ref-7000}{}}%
+Waterworth, S. C., Rees, E. R., \textbf{Clark, C. M.}.C.M., Carlson, S.,
+Miller, I. J., Puglisi, M., \& Kwan, J. C. (2023). Elevated expression
+of srp RiPPs across bacterial phyla in marine sponges\emph{. Citations:
+0}. \href{https://10.1101/2023.06.09.544420}{10.1101/2023.06.09.544420}
+
+\leavevmode\vadjust pre{\hypertarget{ref-10}{}}%
+\textbf{Clark, C. M.}.C.M., Hernandez, A., Mullowney, M. W.,
+Fitz-Henley, J., Li, E., Romanowski, S. B., Pronzato, R., Manconi, R.,
+Sanchez, L. M., \& Murphy, B. T. (2022). Relationship between bacterial
+phylotype and specialized metabolite production in the culturable
+microbiome of two freshwater sponges. \emph{ISME Communications.
+Citations: 2}.
+\href{https://10.1038/s43705-022-00105-8}{10.1038/s43705-022-00105-8}
+
+\leavevmode\vadjust pre{\hypertarget{ref-4}{}}%
+\textbf{Clark, C. M.}.C.M., Nguyen, L., Pham, V. C., Sanchez, L. M., \&
+Murphy, B. T. (2022). Automated microbial library generation using the
+bioinformatics platform IDBac. \emph{Molecules. Citations: 2}.
+\href{https://10.3390/molecules27072038}{10.3390/molecules27072038}
+
+\leavevmode\vadjust pre{\hypertarget{ref-5}{}}%
+Elfeki, M., Mantri, S., \textbf{Clark, C. M.}.C.M., Green, S. J.,
+Ziemert, N., \& Murphy, B. T. (2021). Evaluating the distribution of
+bacterial natural product biosynthetic genes across lake huron sediment.
+\emph{ACS Chemical Biology. Citations: 4}.
+\href{https://10.1021/acschembio.1c00653}{10.1021/acschembio.1c00653}
+
+\leavevmode\vadjust pre{\hypertarget{ref-3}{}}%
+Leao, T. F., \textbf{Clark, C. M.}.C.M., Bauermeister, A., Elijah, E.
+O., Gentry, E. C., Husband, M., Oliveira, M. F., Bandeira, N., Wang, M.,
+\& Dorrestein, P. C. (2021). Quick-start infrastructure for untargeted
+metabolomics analysis in GNPS. \emph{Nature Metabolism. Citations: 8}.
+\href{https://10.1038/s42255-021-00429-0}{10.1038/s42255-021-00429-0}
+
+\leavevmode\vadjust pre{\hypertarget{ref-1}{}}%
+\textbf{Clark, C. M.}.C.M., Murphy, B. T., \& Sanchez, L. M. (2020). A
+call to action: The need for standardization in developing open-source
+mass spectrometry-based methods for microbial subspecies discrimination.
+\emph{mSystems. Citations: 2}.
+\href{https://10.1128/msystems.00813-19}{10.1128/msystems.00813-19}
+
+\leavevmode\vadjust pre{\hypertarget{ref-7}{}}%
+Braesel, J., \textbf{Clark, C. M.}.C.M., Kunstman, K. J., Green, S. J.,
+Maienschein-Cline, M., Murphy, B. T., \& Eustáquio, A. S. (2019). Genome
+sequence of marine-derived streptomyces sp. Strain F001, a producer of
+akashin a and diazaquinomycins. \emph{Microbiology Resource
+Announcements. Citations: 2}.
+\href{https://10.1128/mra.00165-19}{10.1128/mra.00165-19}
+
+\leavevmode\vadjust pre{\hypertarget{ref-8}{}}%
+\textbf{Clark, C. M.}.C.M., Costa, M. S., Conley, E., Li, E., Sanchez,
+L. M., \& Murphy, B. T. (2019). Using the open-source MALDI TOF-MS IDBac
+pipeline for analysis of microbial protein and specialized metabolite
+data. \emph{Journal of Visualized Experiments. Citations: 9}.
+\href{https://10.3791/59219}{10.3791/59219}
+
+\leavevmode\vadjust pre{\hypertarget{ref-9}{}}%
+Costa, M. S., \textbf{Clark, C. M.}.C.M., Ómarsdóttir, S., Sanchez, L.
+M., \& Murphy, B. T. (2019). Minimizing taxonomic and natural product
+redundancy in microbial libraries using MALDI-TOF MS and the
+bioinformatics pipeline IDBac. \emph{Journal of Natural Products.
+Citations: 16}.
+\href{https://10.1021/acs.jnatprod.9b00168}{10.1021/acs.jnatprod.9b00168}
+
+\leavevmode\vadjust pre{\hypertarget{ref-2}{}}%
+\textbf{Clark, C. M.}.C.M., Costa, M. S., Sanchez, L. M., \& Murphy, B.
+T. (2018). Coupling MALDI-TOF mass spectrometry protein and specialized
+metabolite analyses to rapidly discriminate bacterial function.
+\emph{Proceedings of the National Academy of Sciences. Citations: 66}.
+\href{https://10.1073/pnas.1801247115}{10.1073/pnas.1801247115}
+
+\hypertarget{talks}{%
+\section{Talks}\label{talks}}
+
+\begin{cventries}
+    \cventry{How to write reproducible code for data science}{}{}{Sep 2023 }{\begin{cvitems}
+\item Chicago R User Group
+\end{cvitems}}
+    \cventry{Reproducibly building and analyzing knowledge graphs for drug discovery with Nextflow, Neo4j and Python}{}{}{Aug 2023 }{\begin{cvitems}
+\item Chicago Python User Group
+\end{cvitems}}
+    \cventry{SocialGene: Large Scale Knowledge Graphs for Microbial Based Drug Discovery}{}{}{Mar 2023 }{\begin{cvitems}
+\item Computation and Informatics in Biology and Medicine Seminars
+\end{cvitems}}
+    \cventry{Information-Rich Platforms for Natural Product Antibiotic Drug Discovery and Microbial Characterization}{}{}{Jan 2023 }{\begin{cvitems}
+\item Northeastern University Department of Chemistry and Chemical Biology
+\end{cvitems}}
+    \cventry{SocialGene: A Large Scale Search Engine to Find Metagenomic BGCs in Free-Living Organisms}{}{}{Jan 2023 }{\begin{cvitems}
+\item 2023 ASP Younger Members Symposium
+\end{cvitems}}
+    \cventry{Large Scale Analysis of Protein Homology for Microbial Drug Discovery}{}{}{Jun 2022 }{\begin{cvitems}
+\item National Library of Medicine (NLM) T15 Training Conference
+\end{cvitems}}
+    \cventry{Towards near-instant, repository-scale searching for homologous BGCs with Socialgene (Selected alternate speaker, didn't present)}{}{}{Mar 2022 }{\begin{cvitems}
+\item Gordon Research Conference on Marine Natural Products
+\end{cvitems}}
+    \cventry{New Computational Tools for Top-Down and Bottom-Up Natural Product Drug Discovery}{}{}{Nov 2021 }{\begin{cvitems}
+\item Computation \& Informatics in Biology \& Medicine Seminars BMI 915
+\end{cvitems}}
+    \cventry{IDBac: Bioinformatics Software for Microbial Drug Discovery Prioritization and Culturomics Characterization}{}{}{Jun 2020 }{\begin{cvitems}
+\item St. Jude National Graduate Student Symposium (cancelled due to Covid19)
+\end{cvitems}}
+    \cventry{Protein MS isn't the only MS… Programming in R for Metabolomics Mass Spectrometry}{}{}{May 2020 }{\begin{cvitems}
+\item May Institute 2020: Future developers meeting
+\end{cvitems}}
+    \cventry{IDBac: Bioinformatics Software for Microbial Drug Discovery Prioritization and Culturomics Characterization}{}{}{Feb 2020 }{\begin{cvitems}
+\item Gordon Research Conference on Marine Natural Products
+\item Gordon Research Seminar (GRS) on Marine Natural Products
+\end{cvitems}}
+    \cventry{Your Missing Step in Reproducible R Programming: Continuous Deployment}{}{}{Aug 2019 }{\begin{cvitems}
+\item R/Pharma, Harvard University
+\end{cvitems}}
+    \cventry{Bioinformatics in R}{}{}{Apr 2019 }{\begin{cvitems}
+\item satRdays Chicago
+\end{cvitems}}
+    \cventry{Single Function Lightning Talks: “lengths(), not length()”}{}{}{Jan 2019 }{\begin{cvitems}
+\item Chicago R User Group
+\end{cvitems}}
+    \cventry{IDBac: A New Paradigm in Developing Microbial Libraries for Drug Discovery}{}{}{Aug 2018 }{\begin{cvitems}
+\item R/Pharma, Harvard University
+\end{cvitems}}
+    \cventry{IDBac: A Shiny App to Analyze Bacterial Fingerprints and Aid in the Discovery of Potential New Antibiotics}{}{}{Jan 2018 }{\begin{cvitems}
+\item Chicago R User Group
+\end{cvitems}}
+    \cventry{IDBac: A proteomic \& chemometric pipeline for rapid bacterial characterization}{}{}{Mar 2017 }{\begin{cvitems}
+\item Center for Biomolecular Sciences, UIC
+\end{cvitems}}
+    \cventry{Rational design of bacterial strain libraries for drug discovery}{}{}{Nov 2016 }{\begin{cvitems}
+\item UIC Specialized Metabolite Community
+\end{cvitems}}
+    \cventry{Use of MALDI-MS to Create `Smart' Libraries for Drug-Lead Discovery}{}{}{Jul 2016 }{\begin{cvitems}
+\item Chicago Mass Spec Day
+\end{cvitems}}
+    \cventry{HPLC-DAD Method for Trace Detection of Benzoic and Sorbic Acids in High Protein Matrices}{}{}{Apr 2015 }{\begin{cvitems}
+\item SSAOAC Annual Meeting
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{in-progress}{%
+\section{In-Progress}\label{in-progress}}
+
+\begin{cventries}
+    \cventry{Web resource for sharing and searching FAIR MALDI-MS microbial spectra}{}{}{IDBacDB Manuscript}{}\vspace{-4.0mm}
+    \cventry{Repository-scale analyses of protein similarity}{}{}{SocialGene Manuscript}{}\vspace{-4.0mm}
+    \cventry{Multinational collaboration to create a standardized collection of NP HMM models}{}{}{clusterrule Manuscript}{}\vspace{-4.0mm}
+    \cventry{Code standardization and enhancements including addition of a Nextflow pipleine}{}{}{Autometa 2.0 Manuscript}{}\vspace{-4.0mm}
+    \cventry{Co-writing a review on genome resolved metagenomics and natural product discovery}{}{}{Metagenomics Review Manuscript}{}\vspace{-4.0mm}
+    \cventry{Mapping transcriptional regulation in Actinobacteria}{}{}{Transcriptomics}{}\vspace{-4.0mm}
+    \cventry{Improving multisample genome resolved metagenomics}{}{}{Metagenomics}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{select-individual-software-projects}{%
+\section{Select Individual Software
+Projects}\label{select-individual-software-projects}}
+
+\begin{cventries}
+    \cventry{socialgene}{Python, Django, Nextflow, Rust, High-throughput computing}{Repository-scale genome pattern search platform}{2021-2023}{}\vspace{-4.0mm}
+    \cventry{electricShine}{R, Javascript, Node/Electron}{Shiny packaging with Electron}{2019}{}\vspace{-4.0mm}
+    \cventry{mzEasy}{R, Shiny}{Shiny app for converting and visualizing mass spectrometry data}{2019}{}\vspace{-4.0mm}
+    \cventry{mzPlotter}{R, Rmarkdown}{Automated summary of of LC-MS/MS data with interactive Rmarkdown reports}{2019}{}\vspace{-4.0mm}
+    \cventry{mzFromImage}{R, Shiny}{Predict a mass spectrum’s values from a static image file}{2019}{}\vspace{-4.0mm}
+    \cventry{mgfparse}{R}{Low-dependency R package for quickly and efficiently parsing mgf files into R}{2019}{}\vspace{-4.0mm}
+    \cventry{IDBac}{R, Shiny, Electron}{MALDI protein and small molecule bioinformatics platform}{2018-2023}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{select-team-software-projects}{%
+\section{Select Team Software
+Projects}\label{select-team-software-projects}}
+
+\begin{cventries}
+    \cventry{metaBenchmarks}{Nextflow}{Benchmark metagenomic profiling/binning software}{2021}{}\vspace{-4.0mm}
+    \cventry{Autometa}{Python, Nextflow}{Automated binning pipeline for single metagenomes}{2020-2023}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{workshops-host}{%
+\section{Workshops (host)}\label{workshops-host}}
+
+\begin{cventries}
+    \cventry{ASP Annual Meeting (Co-host)}{}{}{Jul 2022 }{\begin{cvitems}
+\item Hands-On training of IDBac, an informatics tool for strain prioritization
+\end{cvitems}}
+    \cventry{Department of Pharmacognosy}{}{}{May 2019 }{\begin{cvitems}
+\item IDBac tutorial
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{workshops-participant}{%
+\section{Workshops (participant)}\label{workshops-participant}}
+
+\begin{cventries}
+    \cventry{Artificial Intelligence for Natural Product Drug Discovery (Invitation-Only; Lorentz Center)}{}{}{Sep 2021 }{}\vspace{-4.0mm}
+    \cventry{Integration of Metabolomics and Genomics (University of Chicago)}{}{}{Aug 2019 }{}\vspace{-4.0mm}
+    \cventry{PATRIC/RAST Workshop (Argonne National Laboratory)}{}{}{Dec 2016 }{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{teaching}{%
+\section{Teaching}\label{teaching}}
+
+\hypertarget{invited-guest-lectures}{%
+\subsection{Invited Guest Lectures}\label{invited-guest-lectures}}
+
+\begin{cventries}
+    \cventry{PSCI 522 Advanced Pharmacognosy (two lectures)}{}{University of Illinois at Chicago}{Spring 2022}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{peer-review}{%
+\section{Peer Review}\label{peer-review}}
+
+\begin{itemize}
+\item
+  Journal of Natural Products
+\item
+  CRC press
+\item
+  rOpenSci
+\item
+  Microbiology Spectrum
+\end{itemize}
+
+\hypertarget{membershipsprofessional-affiliations}{%
+\section{Memberships/Professional
+Affiliations}\label{membershipsprofessional-affiliations}}
+
+\begin{itemize}
+\tightlist
+\item
+  American Society of Pharmacognosy
+\item
+  Chicago R User Group
+\item
+  Chicago Python User group
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+The code for building this CV is available at:
+\url{https://github.com/chasemc/resume}
+
+
+
+\end{document}
