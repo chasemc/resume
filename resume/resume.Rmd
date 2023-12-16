@@ -42,7 +42,7 @@ a <- lapply(a, function(x) {list(
 orcid_data <- data.table::rbindlist(a, fill=TRUE)
 ```
 
-# Employment
+# Education
 
 ```{r employment}
 detailed_entries(data = orcid_data,
@@ -52,7 +52,7 @@ detailed_entries(data = orcid_data,
                  where = Where)
 ```
 
-# Experience
+# Employment (Only relevant positions listed)
 
 ```{r experience}
 job_titles <- data.table::fread(here::here("data", "job-titles.csv"), sep = "\t")

@@ -51,7 +51,7 @@ detailed_entries(data = orcid_data,
                  with =  Institution,
                  where = Where)
 ```
-# Employment
+# Employment (Only relevant positions listed)
 
 ```{r experience}
 job_titles <- data.table::fread(here::here("data", "job-titles.csv"), sep = "\t")
@@ -319,6 +319,46 @@ detailed_entries(data = invited_guest_lecture[order((invited_guest_lecture$year)
 - American Society of Pharmacognosy
 - Chicago R User Group
 - Chicago Python User group
+
+---
+
+# References  
+
+Dr. Brian Murphy
+
+University of Illinois at Chicago
+
+btmurphy@uic.edu
+
+312-413-9057
+\hfill\break
+
+Dr. Laura Sanchez
+
+University of California, Santa Cruz
+
+lmsanche@ucsc.edu
+
+831-459-4676
+\hfill\break
+
+Dr. Mingxun Wang
+
+University of California, Riverside
+
+mingxun.wang@ucr.edu
+
+951-827-5639
+\hfill\break
+
+Dr. Jason Kwan
+
+University of Wisconsin–Madison
+
+jason.kwan@wisc.edu
+
+608-262-3829
+\hfill\break
 
 ---
 
