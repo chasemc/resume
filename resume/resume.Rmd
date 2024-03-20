@@ -24,7 +24,6 @@ library(httr2)
 pipe_assign <- function(x) x
 ```
 
-
 ```{r orcid-data}
 url <- "https://pub.orcid.org/v3.0/0000-0001-6439-9397/educations"
 resp <- request(url) %>% req_headers(Accept = "application/vnd.orcid+json")  %>% req_perform() %>% resp_body_json() 
@@ -81,7 +80,7 @@ vitae::detailed_entries(jobs,
 ```
 \newpage
 
-# Data Science Skills
+# Data Science (select, not comprehensive)
 
 ```{r}
 library(dplyr)
@@ -102,6 +101,17 @@ for (group in skills_formatted$group) {
   )
 }
 ```
+
+# Lab Science (select, not comprehensive)
+
+$\bullet$ \textbf{microbial genomics and transcriptomics}
+
+$\bullet$ \textbf{targeted and untargeted small molecule mass spectrometry and NMR}
+
+$\bullet$ \textbf{biochemistry and biosynthetic gene cluster discovery and characterization}
+
+$\bullet$ \textbf{method development}
+
 
 # Select Individual Software Projects
 

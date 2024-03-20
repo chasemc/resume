@@ -9,7 +9,7 @@ year	meeting	city	state	country	title
 2019-08-23	R/Pharma, Harvard University	Cambridge	MA	USA	Your Missing Step in Reproducible R Programming: Continuous Deployment
 2019-01-23	Chicago R User Group	Chicago	IL	USA	Single Function Lightning Talks: “lengths(), not length()”
 2020-06-01	St. Jude National Graduate Student Symposium (cancelled due to Covid19)	Memphis	TN	USA	IDBac: Bioinformatics Software for Microbial Drug Discovery Prioritization and Culturomics Characterization
-2020-02-23	Gordon Research Seminar (GRS) on Marine Natural Products	Ventura	CA	USA	IDBac: Bioinformatics Software for Microbial Drug Discovery Prioritization and Culturomics Characterization
+2020-02-23	Gordon Research Seminar (GRS) on Marine Natural Products	Ventura	CA	USA	IDBac: Bioinformatics Software for Microbial Drug Discovery Prioritization and Culturomics Characterization (selected GRS talk)
 2020-02-25	Gordon Research Conference on Marine Natural Products	Ventura	CA	USA	IDBac: Bioinformatics Software for Microbial Drug Discovery Prioritization and Culturomics Characterization
 2020-05-08	May Institute 2020: Future developers meeting	Online (Covid)			Protein MS isn't the only MS… Programming in R for Metabolomics Mass Spectrometry
 2021-11-02	Computation & Informatics in Biology & Medicine Seminars BMI 915	Online (Covid)			New Computational Tools for Top-Down and Bottom-Up Natural Product Drug Discovery
@@ -20,3 +20,5 @@ year	meeting	city	state	country	title
 2023-03-07	Computation and Informatics in Biology and Medicine Seminars	Madison	IL	USA	SocialGene: Large Scale Knowledge Graphs for Microbial Based Drug Discovery
 2023-08-10	Chicago Python User Group	Chicago	IL	USA	Reproducibly Building and Analyzing Knowledge Graphs for Drug Discovery with Nextflow, Neo4j and Python
 2023-09-21	Chicago R User Group	Chicago	IL	USA	How to Write Reproducible Code for Data Science
+2024-03-10	Gordon Research Seminar (GRS) on Marine Natural Products	Ventura	CA	USA	A Multi-Repository Scale Genomic and Chemical Search Engine to Enable the Discovery, Production, and Function of Natural Products
+2024-03-14	Gordon Research Conference on Marine Natural Products	Ventura	CA	USA	A Multi-Repository Scale Genomic and Chemical Search Engine to Enable the Discovery, Production, and Function of Natural Products (selected GRS talk)
