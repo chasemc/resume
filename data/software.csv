@@ -8,3 +8,4 @@ year	name	description	link	language	group	contribution
 2021	metaBenchmarks	Benchmark metagenomic profiling/binning software	github.com/KwanLab/metaBenchmarks	Nextflow	team	Creator, teaching, leading effort
 2021-2023	SocialGene	Repository-scale genomic graph database 	unreleased	Python, Django, Nextflow, Rust, High-throughput computing 	solo	Creator/Maintainer
 2019	mgfparse	Low-dependency R package for quickly and efficiently parsing mgf files into R	https://github.com/chasemc/mgfparse	R	solo	Creator/Maintainer
+2024-present	code4np.github.io	Co-creator of and contributor to a blog on computational pharmacognosy	https://code4np.github.io/	R, Python, Quarto	team	Creator/Maintainer/Contributor
