@@ -7,12 +7,12 @@ jobId,position.desc,employer.desc,category,descId,accomplishments
 2,"Method development, New product development, Formulation and Production Research",Research and Development Technician,job,e,"Overhauled the Method Development Department establishing inter-departmental responsibilities, improving and creating new SOPs, streamlining identification requests by establishing a formal request  process and interactive database"
 2,"Method development, New product development, Formulation and Production Research",Research and Development Technician,job,f,"Strengthened and created new relationships with third-party vendors, labs, and universities. "
 2,"Method development, New product development, Formulation and Production Research",Research and Development Technician,job,g,"Controlled budget of method development for purchase of standards, consumables, equipment and third-party testing."
-2,"Method development, New product development, Formulation and Production Research",Research and Development Technician,job,h,Mentored interns from Kennesaw Mountain High School magnet program
+2,"Method development, New product development, Formulation and Production Research",Research and Development Technician,job,h,"Mentored interns from Kennesaw Mountain High School magnet program"
 3,Graduate studies,F31 Fellow,graduate school,a,"Natural product drug discovery, specifically bacterial-derived antibiotics"
 3,Graduate studies,F31 Fellow,graduate school,b,"Conceived, learned to code, and built a bioinformatics program (R Shiny app) for rapid bacterial metabolomics analyses"
-3,Graduate studies,F31 Fellow,graduate school,c,Isolated and cultured 1000’s of bacterial isolates and performed natural product isolation and structure elucidation
-3,Graduate studies,F31 Fellow,graduate school,d,First or co-first author of 6 studies/manuscripts\, of 9 
-3,Graduate studies,F31 Fellow,graduate school,e,Mentored undergradaute and graduate students leading to publishable studies
-6,postdoctoral,Computation and Informatics in Biology and Medicine (CIBM) Postdoctoral Fellow,bioinformatics,b,Developing genomic and metagenomic bioinformatics software
-6,postdoctoral,Computation and Informatics in Biology and Medicine (CIBM) Postdoctoral Fellow,bioinformatics,c,Currently developing a repository-scale analysis platform for comparative genomics
-6,postdoctoral,Computation and Informatics in Biology and Medicine (CIBM) Postdoctoral Fellow,bioinformatics,a,Appointment to UW-Madison/National Library of Medicine T15 training grant
+3,Graduate studies,F31 Fellow,graduate school,c,"Isolated and cultured 1000’s of bacterial isolates and performed natural product isolation and structure elucidation"
+3,Graduate studies,F31 Fellow,graduate school,d,"First or co-first author of 6 studies/manuscripts\, of 9" 
+3,Graduate studies,F31 Fellow,graduate school,e,"Mentored undergradaute and graduate students leading to publishable studies"
+6,postdoctoral,Computation and Informatics in Biology and Medicine (CIBM) Postdoctoral Fellow,bioinformatics,b,"Collaborative development of genomic and metagenomic bioinformatics software"
+6,postdoctoral,Computation and Informatics in Biology and Medicine (CIBM) Postdoctoral Fellow,bioinformatics,c,"Independent development of a repository-scale analysis platform for comparative genomics (multi-omics knowledge graphs)"
+6,postdoctoral,Computation and Informatics in Biology and Medicine (CIBM) Postdoctoral Fellow,bioinformatics,a,"Appointment to UW-Madison/National Library of Medicine T15 training grant"

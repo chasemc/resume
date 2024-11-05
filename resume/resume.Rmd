@@ -144,35 +144,6 @@ detailed_entries(data = software[order(software$year, decreasing = T),],
 
 ```
 
-# Talks
-
-```{r talks}
-
-oral <- data.table::fread(here::here("data/oral_contributed.csv"), sep = "\t")
-
-detailed_entries(data = oral[order(as.Date(oral$year), decreasing = T),],
-                 what = meeting, 
-                 when = year,
-                 why = title)
-```
-
-# Awards
-
-```{r awards}
-
-grants <- data.table::fread(here::here("data/awards.csv"), sep = "\t", fill=T)
-
-grants$end <- ifelse(is.na(grants$end), "present", grants$end)
-grants$year <- ifelse(is.na(grants$begin), grants$end, paste0(grants$begin, "-", grants$end))
-
-
-brief_entries(data =  grants[order(grants$end, decreasing = T),],
-              what = award,
-              when = year,
-              with = amount)
-
-```
-
 # Publications
 
 ```{r publications, include=FALSE}
@@ -236,4 +207,33 @@ bibliography_entries(bibfilepath)
 
 ```
 
+
+# Talks
+
+```{r talks}
+
+oral <- data.table::fread(here::here("data/oral_contributed.csv"), sep = "\t")
+
+detailed_entries(data = oral[order(as.Date(oral$year), decreasing = T),],
+                 what = meeting, 
+                 when = year,
+                 why = title)
+```
+
+# Awards
+
+```{r awards}
+
+grants <- data.table::fread(here::here("data/awards.csv"), sep = "\t", fill=T)
+
+grants$end <- ifelse(is.na(grants$end), "present", grants$end)
+grants$year <- ifelse(is.na(grants$begin), grants$end, paste0(grants$begin, "-", grants$end))
+
+
+brief_entries(data =  grants[order(grants$end, decreasing = T),],
+              what = award,
+              when = year,
+              with = amount)
+
+```
 
