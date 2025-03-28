@@ -1,9 +1,7 @@
 ---
 name: Chase M Clark
-address: "University of Wisconsin-Madison, School of Pharmacy"
 www: chasemc.github.io
 email: "chasingmicrobes@gmail.com"
-twitter: ChasingMicrobes
 github: chasemc
 linkedin: hirechase
 date: "`r format(Sys.time(), '%B %Y')`"
@@ -79,7 +77,6 @@ vitae::detailed_entries(jobs,
            why = accomplishments)
 ```
 
-\newpage
 <!-- 
 # Skills
 
@@ -209,18 +206,6 @@ detailed_entries(data = posters[order(as.Date(posters$year), decreasing = T),],
                  what = title)
 ```
 
-# In Progress
-
-```{r ongoing}
-
-ongoing <- data.table::fread(here::here("data/ongoing_projects.csv"), sep = "\t", fill=T)
-
-detailed_entries(data = ongoing,
-                 what = description,
-                 when = name)
-#                 why = status)
-
-```
 
 # Select Individual Software Projects
 
@@ -307,11 +292,8 @@ detailed_entries(data = invited_guest_lecture[order((invited_guest_lecture$year)
 # Peer Review
 
 - Journal of Natural Products
-
 - CRC press
-
 - rOpenSci
-
 - Microbiology Spectrum
 
 # Memberships/Professional Affiliations
@@ -319,46 +301,6 @@ detailed_entries(data = invited_guest_lecture[order((invited_guest_lecture$year)
 - American Society of Pharmacognosy
 - Chicago R User Group
 - Chicago Python User group
-
----
-
-# References  
-
-Dr. Brian Murphy
-
-University of Illinois at Chicago
-
-btmurphy@uic.edu
-
-312-413-9057
-\hfill\break
-
-Dr. Laura Sanchez
-
-University of California, Santa Cruz
-
-lmsanche@ucsc.edu
-
-831-459-4676
-\hfill\break
-
-Dr. Mingxun Wang
-
-University of California, Riverside
-
-mingxun.wang@ucr.edu
-
-951-827-5639
-\hfill\break
-
-Dr. Jason Kwan
-
-University of Wisconsin–Madison
-
-jason.kwan@wisc.edu
-
-608-262-3829
-\hfill\break
 
 ---
 
