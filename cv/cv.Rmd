@@ -1,7 +1,6 @@
 ---
 name: Chase M Clark
 www: chasemc.github.io
-email: "chasingmicrobes@gmail.com"
 github: chasemc
 linkedin: hirechase
 date: "`r format(Sys.time(), '%B %Y')`"
