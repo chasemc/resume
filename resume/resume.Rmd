@@ -2,8 +2,6 @@
 name: Chase Clark
 address: "University of Wisconsin-Madison, School of Pharmacy"
 www: chasemc.github.io
-email: "chasingmicrobes@gmail.com"
-twitter: ChasingMicrobes
 github: chasemc
 linkedin: hirechase
 date: "`r format(Sys.time(), '%B %Y')`"
